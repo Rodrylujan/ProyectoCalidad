@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0351634-5159-4130-994F-ECE9A97CFD0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoFinal</RootNamespace>
+    <AssemblyName>ProyectoFinal</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mantenedor\FrmCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmCliente.Designer.cs">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedor\FrmHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmHabitacion.Designer.cs">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedor\FrmServicio_Habitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmServicio_Habitacion.Designer.cs">
+      <DependentUpon>FrmServicio_Habitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedor\FrmTarjeta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmTarjeta.Designer.cs">
+      <DependentUpon>FrmTarjeta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedor\FrmTipo_Habitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmTipo_Habitacion.Designer.cs">
+      <DependentUpon>FrmTipo_Habitacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedor\FrmTransaccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmTransaccion.Designer.cs">
+      <DependentUpon>FrmTransaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transacciones\FrmComprobantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\FrmComprobantes.Designer.cs">
+      <DependentUpon>FrmComprobantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\FrmHospedaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\FrmHospedaje.Designer.cs">
+      <DependentUpon>FrmHospedaje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\FrmReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\FrmReserva.Designer.cs">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmSelectCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmSelectCliente.Designer.cs">
+      <DependentUpon>FrmSelectCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\FrmSelectHabitacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\FrmSelectHabitacion.Designer.cs">
+      <DependentUpon>FrmSelectHabitacion.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Mantenedor\FrmCliente.resx">
+      <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor\FrmHabitacion.resx">
+      <DependentUpon>FrmHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor\FrmServicio_Habitacion.resx">
+      <DependentUpon>FrmServicio_Habitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor\FrmTarjeta.resx">
+      <DependentUpon>FrmTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor\FrmTipo_Habitacion.resx">
+      <DependentUpon>FrmTipo_Habitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor\FrmTransaccion.resx">
+      <DependentUpon>FrmTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Principal\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Transacciones\FrmComprobantes.resx">
+      <DependentUpon>FrmComprobantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\FrmHospedaje.resx">
+      <DependentUpon>FrmHospedaje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\FrmReserva.resx">
+      <DependentUpon>FrmReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmSelectCliente.resx">
+      <DependentUpon>FrmSelectCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\FrmSelectHabitacion.resx">
+      <DependentUpon>FrmSelectHabitacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cropped-h_central_full-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\entCliente\entCliente.csproj">
+      <Project>{68a4ce85-32a8-4eb8-91a8-80c464bf3b4b}</Project>
+      <Name>entCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entComprobantePago\entComprobantePago.csproj">
+      <Project>{3e285f0a-4fe7-4eb6-8646-68dc5865cf26}</Project>
+      <Name>entComprobantePago</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entDeatlleServicio\entDeatlleServicio.csproj">
+      <Project>{e77a6644-8831-4179-9bda-cbd93a58c193}</Project>
+      <Name>entDeatlleServicio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entHabitacion\entHabitacion.csproj">
+      <Project>{98388c85-b312-427d-92a2-0b05cfaf9a54}</Project>
+      <Name>entHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entHospedaje\entHospedaje.csproj">
+      <Project>{49d2991b-7281-4e1d-82c1-6b70b753d040}</Project>
+      <Name>entHospedaje</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entReserva\entReserva.csproj">
+      <Project>{e2ae130c-2650-4617-b78f-7bdf66ca9811}</Project>
+      <Name>entReserva</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entServicio\entServicio.csproj">
+      <Project>{aca7d1ca-78e8-490f-ab41-3d1142f9f1db}</Project>
+      <Name>entServicio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTarjeta\entTarjeta.csproj">
+      <Project>{b622d5aa-aa4d-4ec0-9435-90521d4cf4f5}</Project>
+      <Name>entTarjeta</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
+      <Project>{e11ce4fb-30bc-4a56-ba5d-d634b79eee74}</Project>
+      <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
+      <Project>{06ea1147-6991-474d-afb8-42373440b279}</Project>
+      <Name>LogicaNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hotelcentra.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trujillo.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
