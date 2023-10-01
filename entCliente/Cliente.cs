@@ -19,4 +19,3 @@ namespace entCliente
 
     }
 }
-//hola xd
