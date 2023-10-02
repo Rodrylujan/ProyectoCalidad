@@ -29,6 +29,10 @@ namespace ProyectoFinal.Transacciones
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_reservas = new System.Windows.Forms.DataGridView();
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_editar = new System.Windows.Forms.Button();
@@ -47,6 +51,10 @@ namespace ProyectoFinal.Transacciones
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_grabar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_numerohabitacion = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txt_idhabitacion = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnCambiarHabitacio = new System.Windows.Forms.Button();
             this.btn_select_habitacion = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -62,10 +70,6 @@ namespace ProyectoFinal.Transacciones
             this.cb_servicio = new System.Windows.Forms.ComboBox();
             this.dg_servicios = new System.Windows.Forms.DataGridView();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.txt_numerohabitacion = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_idhabitacion = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dg_reservas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,7 +86,27 @@ namespace ProyectoFinal.Transacciones
             this.dg_reservas.AllowUserToResizeColumns = false;
             this.dg_reservas.AllowUserToResizeRows = false;
             this.dg_reservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_reservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dg_reservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_reservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_reservas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dg_reservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_reservas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dg_reservas.EnableHeadersVisualStyles = false;
             this.dg_reservas.Location = new System.Drawing.Point(9, 10);
             this.dg_reservas.Margin = new System.Windows.Forms.Padding(2);
             this.dg_reservas.Name = "dg_reservas";
@@ -90,6 +114,7 @@ namespace ProyectoFinal.Transacciones
             this.dg_reservas.RowHeadersVisible = false;
             this.dg_reservas.RowHeadersWidth = 51;
             this.dg_reservas.RowTemplate.Height = 24;
+            this.dg_reservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_reservas.Size = new System.Drawing.Size(1085, 221);
             this.dg_reservas.TabIndex = 0;
             this.dg_reservas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_reservas_CellContentDoubleClick);
@@ -284,6 +309,44 @@ namespace ProyectoFinal.Transacciones
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             // 
+            // txt_numerohabitacion
+            // 
+            this.txt_numerohabitacion.Location = new System.Drawing.Point(59, 115);
+            this.txt_numerohabitacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_numerohabitacion.Name = "txt_numerohabitacion";
+            this.txt_numerohabitacion.ReadOnly = true;
+            this.txt_numerohabitacion.Size = new System.Drawing.Size(192, 20);
+            this.txt_numerohabitacion.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 115);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Numero";
+            // 
+            // txt_idhabitacion
+            // 
+            this.txt_idhabitacion.Location = new System.Drawing.Point(59, 78);
+            this.txt_idhabitacion.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_idhabitacion.Name = "txt_idhabitacion";
+            this.txt_idhabitacion.ReadOnly = true;
+            this.txt_idhabitacion.Size = new System.Drawing.Size(192, 20);
+            this.txt_idhabitacion.TabIndex = 7;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 78);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Codigo";
+            // 
             // btnCambiarHabitacio
             // 
             this.btnCambiarHabitacio.Location = new System.Drawing.Point(9, 156);
@@ -431,11 +494,33 @@ namespace ProyectoFinal.Transacciones
             this.dg_servicios.AllowUserToDeleteRows = false;
             this.dg_servicios.AllowUserToResizeColumns = false;
             this.dg_servicios.AllowUserToResizeRows = false;
+            this.dg_servicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg_servicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dg_servicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_servicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dg_servicios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_servicios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dg_servicios.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dg_servicios.EnableHeadersVisualStyles = false;
             this.dg_servicios.Location = new System.Drawing.Point(6, 19);
             this.dg_servicios.Name = "dg_servicios";
             this.dg_servicios.ReadOnly = true;
             this.dg_servicios.RowHeadersVisible = false;
+            this.dg_servicios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dg_servicios.Size = new System.Drawing.Size(460, 252);
             this.dg_servicios.TabIndex = 0;
             // 
@@ -451,48 +536,11 @@ namespace ProyectoFinal.Transacciones
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Opciones";
             // 
-            // txt_numerohabitacion
-            // 
-            this.txt_numerohabitacion.Location = new System.Drawing.Point(59, 115);
-            this.txt_numerohabitacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_numerohabitacion.Name = "txt_numerohabitacion";
-            this.txt_numerohabitacion.ReadOnly = true;
-            this.txt_numerohabitacion.Size = new System.Drawing.Size(192, 20);
-            this.txt_numerohabitacion.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 115);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Numero";
-            // 
-            // txt_idhabitacion
-            // 
-            this.txt_idhabitacion.Location = new System.Drawing.Point(59, 78);
-            this.txt_idhabitacion.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_idhabitacion.Name = "txt_idhabitacion";
-            this.txt_idhabitacion.ReadOnly = true;
-            this.txt_idhabitacion.Size = new System.Drawing.Size(192, 20);
-            this.txt_idhabitacion.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 78);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Codigo";
-            // 
             // FrmReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(1257, 597);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -503,6 +551,7 @@ namespace ProyectoFinal.Transacciones
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.dg_reservas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

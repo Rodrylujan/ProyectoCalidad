@@ -59,11 +59,12 @@ namespace ProyectoFinal.Transacciones
         private void inicializar()
         {
             dg_servicios.Columns.AddRange(
-                new DataGridViewTextBoxColumn { HeaderText = "ID servicio" },
+                new DataGridViewTextBoxColumn { HeaderText = "ID" },
                 new DataGridViewTextBoxColumn { HeaderText = "nombre servicio" },
                 new DataGridViewTextBoxColumn { HeaderText = "precio" },
                 new DataGridViewTextBoxColumn { HeaderText = "detalle" }
             );
+            dg_servicios.Columns[0].Width = 40;
         }
         private void LlenarDatosTipoServicio()
         {
