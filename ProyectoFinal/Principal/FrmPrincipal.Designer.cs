@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoFinal.Principal
 {
-    partial class FrmLogin
+    partial class FrmPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProyectoFinal.Principal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
