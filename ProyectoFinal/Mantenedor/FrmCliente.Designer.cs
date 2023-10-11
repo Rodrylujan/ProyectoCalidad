@@ -53,6 +53,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnAnular = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dgvCliente = new System.Windows.Forms.DataGridView();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).BeginInit();
             this.SuspendLayout();
@@ -326,12 +327,27 @@ namespace ProyectoFinal.Mantenedor
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dgvCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
+            // iconButton1
+            // 
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            this.iconButton1.IconColor = System.Drawing.Color.IndianRed;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(864, 419);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(103, 87);
+            this.iconButton1.TabIndex = 7;
+            this.iconButton1.Text = "EXPORTAR";
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(979, 556);
+            this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAnular);
@@ -376,5 +392,6 @@ namespace ProyectoFinal.Mantenedor
         private System.Windows.Forms.DataGridView dgvCliente;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
