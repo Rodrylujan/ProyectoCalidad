@@ -13,7 +13,7 @@ using entCliente;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmCliente : Form
+    public partial class FrmCliente : MaterialSkin.Controls.MaterialForm
     {
         public FrmCliente()
         {
@@ -156,6 +156,16 @@ namespace ProyectoFinal.Mantenedor
             LimpiarVariables();
             groupBox1.Enabled = false;
             listarCliente();
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

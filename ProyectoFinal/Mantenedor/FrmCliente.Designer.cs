@@ -59,6 +59,7 @@ namespace ProyectoFinal.Mantenedor
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.btnAgregar);
@@ -77,14 +78,15 @@ namespace ProyectoFinal.Mantenedor
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(9, 280);
+            this.groupBox1.Location = new System.Drawing.Point(11, 288);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(832, 262);
+            this.groupBox1.Size = new System.Drawing.Size(824, 248);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Cliente";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnCancelar
             // 
@@ -252,6 +254,7 @@ namespace ProyectoFinal.Mantenedor
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(28, 39);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
@@ -261,7 +264,7 @@ namespace ProyectoFinal.Mantenedor
             // 
             // btnNuevo
             // 
-            this.btnNuevo.Location = new System.Drawing.Point(864, 11);
+            this.btnNuevo.Location = new System.Drawing.Point(864, 85);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(74, 40);
@@ -272,7 +275,7 @@ namespace ProyectoFinal.Mantenedor
             // 
             // btnEditar
             // 
-            this.btnEditar.Location = new System.Drawing.Point(864, 81);
+            this.btnEditar.Location = new System.Drawing.Point(864, 156);
             this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(74, 40);
@@ -283,7 +286,7 @@ namespace ProyectoFinal.Mantenedor
             // 
             // btnAnular
             // 
-            this.btnAnular.Location = new System.Drawing.Point(864, 151);
+            this.btnAnular.Location = new System.Drawing.Point(864, 234);
             this.btnAnular.Margin = new System.Windows.Forms.Padding(2);
             this.btnAnular.Name = "btnAnular";
             this.btnAnular.Size = new System.Drawing.Size(74, 40);
@@ -294,7 +297,7 @@ namespace ProyectoFinal.Mantenedor
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(864, 236);
+            this.btnSalir.Location = new System.Drawing.Point(864, 305);
             this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(74, 40);
@@ -311,14 +314,14 @@ namespace ProyectoFinal.Mantenedor
             this.dgvCliente.AllowUserToResizeRows = false;
             this.dgvCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCliente.Location = new System.Drawing.Point(9, 24);
+            this.dgvCliente.Location = new System.Drawing.Point(11, 69);
             this.dgvCliente.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.RowHeadersVisible = false;
             this.dgvCliente.RowHeadersWidth = 51;
             this.dgvCliente.RowTemplate.Height = 24;
-            this.dgvCliente.Size = new System.Drawing.Size(832, 250);
+            this.dgvCliente.Size = new System.Drawing.Size(836, 205);
             this.dgvCliente.TabIndex = 6;
             this.dgvCliente.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dgvCliente.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -335,11 +338,11 @@ namespace ProyectoFinal.Mantenedor
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCliente";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCliente)).EndInit();
