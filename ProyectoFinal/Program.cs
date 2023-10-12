@@ -1,4 +1,4 @@
-﻿using ProyectoFinal.Principal;
+﻿using ProyectoFinal.Login;
 using System;
 using System.Collections.Generic;
 using System.Linq;

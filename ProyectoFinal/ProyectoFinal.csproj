@@ -62,6 +62,30 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login\FrmCambiarPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmCambiarPass.Designer.cs">
+      <DependentUpon>FrmCambiarPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmNuevaPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmNuevaPass.Designer.cs">
+      <DependentUpon>FrmNuevaPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\FrmOlvidePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmOlvidePass.Designer.cs">
+      <DependentUpon>FrmOlvidePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Mantenedor\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +122,11 @@
     <Compile Include="Mantenedor\FrmTransaccion.Designer.cs">
       <DependentUpon>FrmTransaccion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal\FrmLogin.cs">
+    <Compile Include="Principal\FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Principal\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Principal\FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -136,6 +160,18 @@
     <Compile Include="view\FrmSelectHabitacion.Designer.cs">
       <DependentUpon>FrmSelectHabitacion.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Login\FrmCambiarPass.resx">
+      <DependentUpon>FrmCambiarPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmNuevaPass.resx">
+      <DependentUpon>FrmNuevaPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmOlvidePass.resx">
+      <DependentUpon>FrmOlvidePass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,8 +190,8 @@
     <EmbeddedResource Include="Mantenedor\FrmTransaccion.resx">
       <DependentUpon>FrmTransaccion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Principal\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Principal\FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
