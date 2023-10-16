@@ -68,6 +68,12 @@
     <Compile Include="Login\FrmCambiarPass.Designer.cs">
       <DependentUpon>FrmCambiarPass.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\FrmIniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\FrmIniciarSesion.Designer.cs">
+      <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
     <EmbeddedResource Include="Login\FrmCambiarPass.resx">
       <DependentUpon>FrmCambiarPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\FrmIniciarSesion.resx">
+      <DependentUpon>FrmIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -283,6 +292,26 @@
   <ItemGroup>
     <None Include="Resources\Trujillo.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\297280122_443873937750476_5330298122691580289_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\boton-cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-con-llave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
