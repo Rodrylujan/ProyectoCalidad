@@ -12,9 +12,9 @@ using ProyectoFinal.Transacciones;
 
 namespace ProyectoFinal.Principal
 {
-    public partial class FrmLogin : Form
+    public partial class FrmPrincipal : Form
     {
-        public FrmLogin()
+        public FrmPrincipal()
         {
             InitializeComponent();
         }

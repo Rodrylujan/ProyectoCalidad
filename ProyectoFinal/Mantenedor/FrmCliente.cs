@@ -32,7 +32,6 @@ namespace ProyectoFinal.Mantenedor
 
         }
 
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             groupBox1.Enabled = true;
@@ -44,6 +43,7 @@ namespace ProyectoFinal.Mantenedor
             btnAnular.Enabled = false;
             btnSalir.Enabled = false;
         }
+
         private void LimpiarVariables()
         {
             txtNombre.Text = "";
@@ -59,6 +59,74 @@ namespace ProyectoFinal.Mantenedor
         }
         
 
+       
+      
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgvCliente.Rows[e.RowIndex];
+            txtId.Text = filaActual.Cells[0].Value.ToString();
+            txtNombre.Text = filaActual.Cells[1].Value.ToString();
+            txtApellido.Text = filaActual.Cells[2].Value.ToString();
+            txtDireccion.Text = filaActual.Cells[3].Value.ToString();
+            txtCelular.Text = filaActual.Cells[4].Value.ToString();
+            txtDni.Text = filaActual.Cells[5].Value.ToString();
+            cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[6].Value);
+            dtFechaRegistro.Text = filaActual.Cells[7].Value.ToString();
+        }
+
+
+        private void btnAnular_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entCliente.Cliente c = new entCliente.Cliente();
+                c.idCliente = int.Parse(txtId.Text.Trim());
+                cbkEstadoCliente.Checked = false;
+                c.estCliente = cbkEstadoCliente.Checked;
+                logCliente.Instancia.DeshabilitarCliente(c);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            groupBox1.Enabled = false;
+            listarCliente();
+        }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            btnModificar.Visible = true;
+            btnAgregar.Visible = false;
+
+
+            btnNuevo.Enabled = false;
+            btnAnular.Enabled = false;
+            btnSalir.Enabled = false;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -72,42 +140,14 @@ namespace ProyectoFinal.Mantenedor
                 c.estCliente = cbkEstadoCliente.Checked;
                 c.fecRegCliente = dtFechaRegistro.Value;
                 logCliente.Instancia.InsertarCliente(c);
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Erro.." + ex);
             }
             LimpiarVariables();
             groupBox1.Enabled = false;
             listarCliente();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = true;
-            btnModificar.Visible = true;
-            btnAgregar.Visible = false;
-
-            btnNuevo.Enabled = false;
-            btnAnular.Enabled = false;
-            btnSalir.Enabled = false;
-        }
-
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow filaActual = dgvCliente.Rows[e.RowIndex];
-            txtId.Text = filaActual.Cells[0].Value.ToString();
-            txtNombre.Text = filaActual.Cells[1].Value.ToString();
-            txtApellido.Text = filaActual.Cells[2].Value.ToString();
-            txtDireccion.Text = filaActual.Cells[3].Value.ToString();
-            txtCelular.Text = filaActual.Cells[4].Value.ToString();
-            txtDni.Text = filaActual.Cells[5].Value.ToString();
-            cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[6].Value);
-            dtFechaRegistro.Text = filaActual.Cells[7].Value.ToString();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -138,34 +178,6 @@ namespace ProyectoFinal.Mantenedor
         {
             groupBox1.Enabled = false;
             LimpiarVariables();
-        }
-
-        private void btnAnular_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entCliente.Cliente c = new entCliente.Cliente();
-                c.idCliente = int.Parse(txtId.Text.Trim());
-                cbkEstadoCliente.Checked = false;
-                c.estCliente = cbkEstadoCliente.Checked;
-                logCliente.Instancia.DeshabilitarCliente(c);
-            }catch(Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            groupBox1.Enabled = false;
-            listarCliente();
-        }
-
-        private void FrmCliente_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }
