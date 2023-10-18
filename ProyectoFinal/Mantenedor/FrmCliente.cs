@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogicaNegocio.Mantenedor;
 using entCliente;
-
+using MaterialSkin;
 
 namespace ProyectoFinal.Mantenedor
 {
@@ -17,6 +17,7 @@ namespace ProyectoFinal.Mantenedor
     {
         public FrmCliente()
         {
+           
             InitializeComponent();
             listarCliente();
             groupBox1.Enabled = false;
@@ -97,7 +98,8 @@ namespace ProyectoFinal.Mantenedor
 
         private void FrmCliente_Load(object sender, EventArgs e)
         {
-
+            SkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            SkinManager.ColorScheme = new ColorScheme(Primary.Red900, Primary.Blue900, Primary.Blue900, Accent.Green700, TextShade.WHITE);
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)

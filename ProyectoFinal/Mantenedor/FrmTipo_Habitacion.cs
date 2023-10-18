@@ -125,5 +125,10 @@ namespace ProyectoFinal.Mantenedor
             btnEditar.Enabled = true;
             btnSalir.Enabled = true;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
