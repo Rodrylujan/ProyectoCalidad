@@ -42,7 +42,7 @@ namespace ProyectoFinal.Login
             // 
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(619, 12);
+            this.btnSalir.Location = new System.Drawing.Point(619, 231);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(120, 40);
             this.btnSalir.TabIndex = 8;
@@ -54,7 +54,7 @@ namespace ProyectoFinal.Login
             // 
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(259, 199);
+            this.btnActualizar.Location = new System.Drawing.Point(259, 231);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(120, 40);
             this.btnActualizar.TabIndex = 19;
@@ -64,7 +64,7 @@ namespace ProyectoFinal.Login
             // txbConfirmarPassword
             // 
             this.txbConfirmarPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbConfirmarPassword.Location = new System.Drawing.Point(221, 123);
+            this.txbConfirmarPassword.Location = new System.Drawing.Point(221, 155);
             this.txbConfirmarPassword.Name = "txbConfirmarPassword";
             this.txbConfirmarPassword.PasswordChar = '*';
             this.txbConfirmarPassword.Size = new System.Drawing.Size(284, 26);
@@ -74,7 +74,7 @@ namespace ProyectoFinal.Login
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(44, 129);
+            this.label3.Location = new System.Drawing.Point(44, 161);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(162, 20);
             this.label3.TabIndex = 17;
@@ -83,7 +83,7 @@ namespace ProyectoFinal.Login
             // txbNuevoPasssword
             // 
             this.txbNuevoPasssword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbNuevoPasssword.Location = new System.Drawing.Point(221, 65);
+            this.txbNuevoPasssword.Location = new System.Drawing.Point(221, 97);
             this.txbNuevoPasssword.Name = "txbNuevoPasssword";
             this.txbNuevoPasssword.PasswordChar = '*';
             this.txbNuevoPasssword.Size = new System.Drawing.Size(284, 26);
@@ -95,7 +95,7 @@ namespace ProyectoFinal.Login
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(44, 71);
+            this.label2.Location = new System.Drawing.Point(44, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(138, 20);
             this.label2.TabIndex = 15;
@@ -103,7 +103,7 @@ namespace ProyectoFinal.Login
             // 
             // lbContraseñas
             // 
-            this.lbContraseñas.Location = new System.Drawing.Point(515, 65);
+            this.lbContraseñas.Location = new System.Drawing.Point(515, 97);
             this.lbContraseñas.Name = "lbContraseñas";
             this.lbContraseñas.Size = new System.Drawing.Size(224, 93);
             this.lbContraseñas.TabIndex = 20;
@@ -120,7 +120,6 @@ namespace ProyectoFinal.Login
             this.Controls.Add(this.txbNuevoPasssword);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalir);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNuevaPass";
             this.Text = "FrmNuevaPass";
             this.Load += new System.EventHandler(this.FrmNuevaPass_Load);

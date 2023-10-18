@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Login
 {
-    public partial class FrmOlvidePass : Form
+    public partial class FrmOlvidePass : MaterialSkin.Controls.MaterialForm
     {
         public FrmOlvidePass()
         {
@@ -20,6 +20,11 @@ namespace ProyectoFinal.Login
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FrmOlvidePass_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

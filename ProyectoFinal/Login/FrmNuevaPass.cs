@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Login
 {
-    public partial class FrmNuevaPass : Form
+    public partial class FrmNuevaPass : MaterialSkin.Controls.MaterialForm
     {
         public FrmNuevaPass()
         {

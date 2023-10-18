@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Login
 {
-    public partial class FrmIniciarSesion : Form
+    public partial class FrmIniciarSesion : MaterialSkin.Controls.MaterialForm
     {
         private string messageUserDefect = "Ingrese su usuario";
         private string messagePasswordDefect = "Ingrese su contraseña";
@@ -75,6 +75,10 @@ namespace ProyectoFinal.Login
                 txbPassword.PasswordChar = '\0';
             }
         }
-        
+
+        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

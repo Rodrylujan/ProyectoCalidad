@@ -40,7 +40,7 @@ namespace ProyectoFinal.Login
             // 
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(619, 12);
+            this.btnSalir.Location = new System.Drawing.Point(619, 273);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(120, 40);
             this.btnSalir.TabIndex = 7;
@@ -52,7 +52,7 @@ namespace ProyectoFinal.Login
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 69);
+            this.label1.Location = new System.Drawing.Point(173, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(408, 20);
             this.label1.TabIndex = 8;
@@ -62,7 +62,7 @@ namespace ProyectoFinal.Login
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(250, 101);
+            this.label2.Location = new System.Drawing.Point(305, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 9;
@@ -71,7 +71,7 @@ namespace ProyectoFinal.Login
             // txbUser
             // 
             this.txbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbUser.Location = new System.Drawing.Point(254, 146);
+            this.txbUser.Location = new System.Drawing.Point(309, 160);
             this.txbUser.Name = "txbUser";
             this.txbUser.Size = new System.Drawing.Size(99, 26);
             this.txbUser.TabIndex = 11;
@@ -80,7 +80,7 @@ namespace ProyectoFinal.Login
             // 
             this.btnActualizar.FlatAppearance.BorderSize = 0;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(243, 204);
+            this.btnActualizar.Location = new System.Drawing.Point(299, 273);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(120, 40);
             this.btnActualizar.TabIndex = 15;
@@ -97,10 +97,10 @@ namespace ProyectoFinal.Login
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalir);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmOlvidePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmOlvidePass";
+            this.Load += new System.EventHandler(this.FrmOlvidePass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
