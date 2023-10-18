@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmTipo_Habitacion : Form
+    public partial class FrmTipo_Habitacion : MaterialSkin.Controls.MaterialForm
     {
         public FrmTipo_Habitacion()
         {
@@ -37,14 +37,18 @@ namespace ProyectoFinal.Mantenedor
             btnSalir.Enabled = true;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void dgvTipo_Habitacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            groupBox1.Enabled = true;
-            btnModificar.Visible = true;
-            btnGrabar.Visible = false;
+            DataGridViewRow filaActual = dgvTipo_Habitacion.Rows[e.RowIndex];
+            txtId.Text = filaActual.Cells[0].Value.ToString();
+            txtNombre.Text = filaActual.Cells[1].Value.ToString();
+            txtPrecio.Text = filaActual.Cells[2].Value.ToString();
+            txtDetalle.Text = filaActual.Cells[3].Value.ToString();
+        }
 
-            btnNuevo.Enabled = false;
-            btnSalir.Enabled = false;
+        private void FrmTipo_Habitacion_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -55,6 +59,16 @@ namespace ProyectoFinal.Mantenedor
             btnModificar.Visible = false;
 
             btnEditar.Enabled = false;
+            btnSalir.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            btnModificar.Visible = true;
+            btnGrabar.Visible = false;
+
+            btnNuevo.Enabled = false;
             btnSalir.Enabled = false;
         }
 
@@ -109,16 +123,7 @@ namespace ProyectoFinal.Mantenedor
             LimpiarVariables();
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true;
-            btnSalir.Enabled = true;    
-        }
-
-        private void dgvTipo_Habitacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow filaActual = dgvTipo_Habitacion.Rows[e.RowIndex];
-            txtId.Text = filaActual.Cells[0].Value.ToString();
-            txtNombre.Text = filaActual.Cells[1].Value.ToString();
-            txtPrecio.Text = filaActual.Cells[2].Value.ToString();
-            txtDetalle.Text = filaActual.Cells[3].Value.ToString();
+            btnSalir.Enabled = true;
         }
     }
 }

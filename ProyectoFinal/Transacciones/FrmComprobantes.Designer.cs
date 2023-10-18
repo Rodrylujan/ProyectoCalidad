@@ -41,19 +41,22 @@
             this.dgvComprobantes.AllowUserToResizeRows = false;
             this.dgvComprobantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvComprobantes.Location = new System.Drawing.Point(0, 0);
+            this.dgvComprobantes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvComprobantes.Name = "dgvComprobantes";
             this.dgvComprobantes.ReadOnly = true;
             this.dgvComprobantes.RowHeadersVisible = false;
-            this.dgvComprobantes.Size = new System.Drawing.Size(797, 375);
+            this.dgvComprobantes.RowHeadersWidth = 51;
+            this.dgvComprobantes.Size = new System.Drawing.Size(1063, 462);
             this.dgvComprobantes.TabIndex = 0;
+            this.dgvComprobantes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComprobantes_CellContentClick);
             this.dgvComprobantes.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComprobantes_CellContentDoubleClick);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(347, 399);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSalir.Location = new System.Drawing.Point(463, 491);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(74, 40);
+            this.btnSalir.Size = new System.Drawing.Size(99, 49);
             this.btnSalir.TabIndex = 22;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -61,11 +64,12 @@
             // 
             // FrmComprobantes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.dgvComprobantes);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmComprobantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmComprobantes";

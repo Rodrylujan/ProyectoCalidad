@@ -177,5 +177,10 @@ namespace ProyectoFinal.Transacciones
                 
             }
         }
+
+        private void dgvComprobantes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

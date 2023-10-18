@@ -14,7 +14,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmHabitacion : Form
+    public partial class FrmHabitacion : MaterialSkin.Controls.MaterialForm
     {
         public FrmHabitacion()
         {
@@ -71,65 +71,6 @@ namespace ProyectoFinal.Mantenedor
             cmbidTipoHab.ValueMember = "idTipoHabitacion";
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = true;
-            btnModificar.Visible = true;
-            btnAgregar.Visible = false;
-            txtId.Enabled = false;
-
-            btnNuevo.Enabled = false;
-            btnSalir.Enabled = false;
-        }
-
-        private void btnModificar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entHabitacion.Habitacion h = new entHabitacion.Habitacion();
-                entTipoHabitacion.TipoHabitacion th = new entTipoHabitacion.TipoHabitacion();
-                h.idHabitacion = int.Parse(txtId.Text);
-                h.numHabitacion = int.Parse(txtNumHabitacion.Text);
-                h.numPisoHabitacion = int.Parse(txtNumPiso.Text);
-                h.DisHabitacion = cmbDisponibilidad.SelectedItem.ToString();
-                th.idTipoHabitacion = int.Parse(cmbidTipoHab.SelectedValue.ToString());
-                h.idTipoHabitacion = th;
-
-                logHabitacion.Instancia.EditaHabitacion(h);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro.." + ex);
-            }
-            LimpiarVariables();
-            groupBox1.Enabled = false;
-            ListarHabitacion();
-
-            
-        }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = false;
-            LimpiarVariables();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = true;
-            txtId.Enabled = true;
-            btnAgregar.Visible = true;
-            LimpiarVariables();
-            btnModificar.Visible = false;
-
-            btnEditar.Enabled = false;
-            btnSalir.Enabled = false;
-        }
         private void LimpiarVariables()
         {
             txtId.Text = "";
@@ -139,30 +80,6 @@ namespace ProyectoFinal.Mantenedor
             btnNuevo.Enabled = true;
             btnEditar.Enabled = true; 
             btnSalir.Enabled = true;
-        }
-
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entHabitacion.Habitacion h = new entHabitacion.Habitacion();
-                entTipoHabitacion.TipoHabitacion th = new entTipoHabitacion.TipoHabitacion();
-
-                h.numHabitacion = int.Parse(txtNumHabitacion.Text);
-                h.numPisoHabitacion = int.Parse(txtNumPiso.Text);
-                h.DisHabitacion = cmbDisponibilidad.SelectedItem.ToString();
-                th.idTipoHabitacion= int.Parse(cmbidTipoHab.SelectedValue.ToString());
-                h.idTipoHabitacion = th;
-
-                logHabitacion.Instancia.InsertarHabitacion(h);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro.." + ex);
-            }
-            LimpiarVariables();
-            groupBox1.Enabled = false;
-            ListarHabitacion();
         }
 
         private void dgvHabitacion_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -191,6 +108,88 @@ namespace ProyectoFinal.Mantenedor
                     break; // Si deseas detener la comparación después de encontrar una coincidencia.
                 }
             }
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            txtId.Enabled = true;
+            btnAgregar.Visible = true;
+            LimpiarVariables();
+            btnModificar.Visible = false;
+
+            btnEditar.Enabled = false;
+            btnSalir.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            btnModificar.Visible = true;
+            btnAgregar.Visible = false;
+            txtId.Enabled = false;
+
+            btnNuevo.Enabled = false;
+            btnSalir.Enabled = false;
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entHabitacion.Habitacion h = new entHabitacion.Habitacion();
+                entTipoHabitacion.TipoHabitacion th = new entTipoHabitacion.TipoHabitacion();
+
+                h.numHabitacion = int.Parse(txtNumHabitacion.Text);
+                h.numPisoHabitacion = int.Parse(txtNumPiso.Text);
+                h.DisHabitacion = cmbDisponibilidad.SelectedItem.ToString();
+                th.idTipoHabitacion = int.Parse(cmbidTipoHab.SelectedValue.ToString());
+                h.idTipoHabitacion = th;
+
+                logHabitacion.Instancia.InsertarHabitacion(h);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.." + ex);
+            }
+            LimpiarVariables();
+            groupBox1.Enabled = false;
+            ListarHabitacion();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entHabitacion.Habitacion h = new entHabitacion.Habitacion();
+                entTipoHabitacion.TipoHabitacion th = new entTipoHabitacion.TipoHabitacion();
+                h.idHabitacion = int.Parse(txtId.Text);
+                h.numHabitacion = int.Parse(txtNumHabitacion.Text);
+                h.numPisoHabitacion = int.Parse(txtNumPiso.Text);
+                h.DisHabitacion = cmbDisponibilidad.SelectedItem.ToString();
+                th.idTipoHabitacion = int.Parse(cmbidTipoHab.SelectedValue.ToString());
+                h.idTipoHabitacion = th;
+
+                logHabitacion.Instancia.EditaHabitacion(h);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro.." + ex);
+            }
+            LimpiarVariables();
+            groupBox1.Enabled = false;
+            ListarHabitacion();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = false;
+            LimpiarVariables();
         }
     }
 }

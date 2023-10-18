@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmServicio_Habitacion : Form
+    public partial class FrmServicio_Habitacion : MaterialSkin.Controls.MaterialForm
     {
         public FrmServicio_Habitacion()
         {
@@ -38,14 +38,10 @@ namespace ProyectoFinal.Mantenedor
             dgvSerHab.DataSource = logServicio.Instancia.ListarServicio();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            groupBox1.Enabled = true;
-            btnModificar.Visible = true;
-            btnAgregar.Visible = false;
 
-            btnNuevo.Enabled = false;
-            btnSalir.Enabled = false;
+        private void FrmServicio_Habitacion_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -57,6 +53,16 @@ namespace ProyectoFinal.Mantenedor
             btnModificar.Visible = false;
 
             btnEditar.Enabled = false;
+            btnSalir.Enabled = false;
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            groupBox1.Enabled = true;
+            btnModificar.Visible = true;
+            btnAgregar.Visible = false;
+
+            btnNuevo.Enabled = false;
             btnSalir.Enabled = false;
         }
 
@@ -73,7 +79,7 @@ namespace ProyectoFinal.Mantenedor
 
                 s.nombre_servicio = txtNombre.Text;
                 s.precio = float.Parse(txtPrecio.Text);
-                s.descripcion= txtDetalle.Text;
+                s.descripcion = txtDetalle.Text;
 
 
                 logServicio.Instancia.InsertarServicio(s);

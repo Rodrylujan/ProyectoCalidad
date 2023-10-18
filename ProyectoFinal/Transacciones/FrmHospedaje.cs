@@ -16,5 +16,10 @@ namespace ProyectoFinal.Transacciones
         {
             InitializeComponent();
         }
+
+        private void FrmHospedaje_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
