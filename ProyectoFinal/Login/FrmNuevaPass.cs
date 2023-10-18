@@ -37,5 +37,10 @@ namespace ProyectoFinal.Login
                             "- Minimo 8 caracteres\n";
             lbContraseñas.Text = condiciones;
         }
+
+        private void FrmNuevaPass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

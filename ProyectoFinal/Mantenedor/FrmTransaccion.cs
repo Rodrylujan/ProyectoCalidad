@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmTransaccion : Form
+    public partial class FrmTransaccion : MaterialSkin.Controls.MaterialForm
     {
         public FrmTransaccion()
         {
@@ -22,7 +22,38 @@ namespace ProyectoFinal.Mantenedor
 
         }
 
+
         private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAgregar_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
 
         }

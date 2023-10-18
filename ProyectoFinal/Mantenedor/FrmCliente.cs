@@ -53,14 +53,14 @@ namespace ProyectoFinal.Mantenedor
             txtDni.Text = "";
 
             btnNuevo.Enabled = true;
-            btnEditar.Enabled=true;
-            btnAnular.Enabled=true;
-            btnSalir.Enabled=true;
+            btnEditar.Enabled = true;
+            btnAnular.Enabled = true;
+            btnSalir.Enabled = true;
         }
-        
 
-       
-      
+
+
+
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
