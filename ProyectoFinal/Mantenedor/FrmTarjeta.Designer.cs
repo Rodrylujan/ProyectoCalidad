@@ -61,7 +61,7 @@ namespace ProyectoFinal.Mantenedor
             this.dgvTarjeta.AllowUserToResizeRows = false;
             this.dgvTarjeta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTarjeta.Location = new System.Drawing.Point(9, 77);
-            this.dgvTarjeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvTarjeta.Margin = new System.Windows.Forms.Padding(2);
             this.dgvTarjeta.Name = "dgvTarjeta";
             this.dgvTarjeta.ReadOnly = true;
             this.dgvTarjeta.RowHeadersVisible = false;
@@ -88,9 +88,9 @@ namespace ProyectoFinal.Mantenedor
             this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 292);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(577, 264);
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
@@ -102,7 +102,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(434, 176);
+            this.btnCancelar.Location = new System.Drawing.Point(435, 178);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(115, 48);
             this.btnCancelar.TabIndex = 29;
@@ -116,7 +116,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnModificar.IconColor = System.Drawing.Color.Black;
             this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(434, 109);
+            this.btnModificar.Location = new System.Drawing.Point(435, 111);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(115, 48);
             this.btnModificar.TabIndex = 28;
@@ -130,7 +130,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(434, 40);
+            this.btnAgregar.Location = new System.Drawing.Point(435, 42);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(115, 48);
             this.btnAgregar.TabIndex = 21;
@@ -141,42 +141,42 @@ namespace ProyectoFinal.Mantenedor
             // dtFecRegistro
             // 
             this.dtFecRegistro.Location = new System.Drawing.Point(143, 228);
-            this.dtFecRegistro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtFecRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecRegistro.Name = "dtFecRegistro";
-            this.dtFecRegistro.Size = new System.Drawing.Size(151, 20);
+            this.dtFecRegistro.Size = new System.Drawing.Size(264, 20);
             this.dtFecRegistro.TabIndex = 27;
             // 
             // txtPropietario
             // 
             this.txtPropietario.Location = new System.Drawing.Point(143, 190);
-            this.txtPropietario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPropietario.Margin = new System.Windows.Forms.Padding(2);
             this.txtPropietario.Name = "txtPropietario";
-            this.txtPropietario.Size = new System.Drawing.Size(148, 20);
+            this.txtPropietario.Size = new System.Drawing.Size(264, 20);
             this.txtPropietario.TabIndex = 26;
             // 
             // txtCvv
             // 
             this.txtCvv.Location = new System.Drawing.Point(143, 153);
-            this.txtCvv.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCvv.Margin = new System.Windows.Forms.Padding(2);
             this.txtCvv.Name = "txtCvv";
-            this.txtCvv.Size = new System.Drawing.Size(76, 20);
+            this.txtCvv.Size = new System.Drawing.Size(264, 20);
             this.txtCvv.TabIndex = 25;
             // 
             // dtFecVencimiento
             // 
             this.dtFecVencimiento.Location = new System.Drawing.Point(143, 109);
-            this.dtFecVencimiento.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtFecVencimiento.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecVencimiento.Name = "dtFecVencimiento";
-            this.dtFecVencimiento.Size = new System.Drawing.Size(151, 20);
+            this.dtFecVencimiento.Size = new System.Drawing.Size(264, 20);
             this.dtFecVencimiento.TabIndex = 24;
             this.dtFecVencimiento.ValueChanged += new System.EventHandler(this.dtFecVencimiento_ValueChanged);
             // 
             // txtNumTarjeta
             // 
             this.txtNumTarjeta.Location = new System.Drawing.Point(143, 70);
-            this.txtNumTarjeta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumTarjeta.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumTarjeta.Name = "txtNumTarjeta";
-            this.txtNumTarjeta.Size = new System.Drawing.Size(148, 20);
+            this.txtNumTarjeta.Size = new System.Drawing.Size(264, 20);
             this.txtNumTarjeta.TabIndex = 23;
             // 
             // label6
@@ -232,9 +232,9 @@ namespace ProyectoFinal.Mantenedor
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(143, 37);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(88, 20);
+            this.txtId.Size = new System.Drawing.Size(264, 20);
             this.txtId.TabIndex = 6;
             // 
             // label1
@@ -299,9 +299,9 @@ namespace ProyectoFinal.Mantenedor
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvTarjeta);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTarjeta";
-            this.Text = "FrmTarjeta";
+            this.Text = "TARJETA";
             this.Load += new System.EventHandler(this.FrmTarjeta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarjeta)).EndInit();
             this.groupBox1.ResumeLayout(false);

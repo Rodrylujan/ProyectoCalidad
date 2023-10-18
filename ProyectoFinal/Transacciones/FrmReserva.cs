@@ -19,7 +19,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Transacciones
 {
-    public partial class FrmReserva : Form
+    public partial class FrmReserva : MaterialSkin.Controls.MaterialForm
     {
         List<entServicio.Servicio> listaServicios = new List<entServicio.Servicio>();
         private bool cliente = false;
@@ -464,6 +464,11 @@ namespace ProyectoFinal.Transacciones
                 listaServicios = logServicio.Instancia.ListarServicioPorReserva(int.Parse(txt_id_reserva.Text));
                 ListaDeServiciosAdicionales();
             }
+        }
+
+        private void FrmReserva_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

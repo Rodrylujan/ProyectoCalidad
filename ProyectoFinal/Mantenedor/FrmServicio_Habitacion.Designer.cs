@@ -58,7 +58,7 @@ namespace ProyectoFinal.Mantenedor
             this.dgvSerHab.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSerHab.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSerHab.Location = new System.Drawing.Point(9, 67);
-            this.dgvSerHab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSerHab.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSerHab.Name = "dgvSerHab";
             this.dgvSerHab.ReadOnly = true;
             this.dgvSerHab.RowHeadersVisible = false;
@@ -82,9 +82,9 @@ namespace ProyectoFinal.Mantenedor
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 275);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(529, 219);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -138,10 +138,10 @@ namespace ProyectoFinal.Mantenedor
             // txtDetalle
             // 
             this.txtDetalle.Location = new System.Drawing.Point(128, 150);
-            this.txtDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.txtDetalle.Multiline = true;
             this.txtDetalle.Name = "txtDetalle";
-            this.txtDetalle.Size = new System.Drawing.Size(150, 53);
+            this.txtDetalle.Size = new System.Drawing.Size(217, 53);
             this.txtDetalle.TabIndex = 20;
             // 
             // label5
@@ -157,25 +157,25 @@ namespace ProyectoFinal.Mantenedor
             // txtPrecio
             // 
             this.txtPrecio.Location = new System.Drawing.Point(128, 110);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(150, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(217, 20);
             this.txtPrecio.TabIndex = 8;
             // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(128, 74);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtNombre.Size = new System.Drawing.Size(217, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(128, 37);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(88, 20);
+            this.txtId.Size = new System.Drawing.Size(217, 20);
             this.txtId.TabIndex = 6;
             // 
             // label3
@@ -264,10 +264,10 @@ namespace ProyectoFinal.Mantenedor
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvSerHab);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmServicio_Habitacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmServicio_Habitacion";
+            this.Text = "SERVICIO DE LA HABITACIÓN";
             this.Load += new System.EventHandler(this.FrmServicio_Habitacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSerHab)).EndInit();
             this.groupBox1.ResumeLayout(false);

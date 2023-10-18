@@ -148,7 +148,7 @@ namespace ProyectoFinal.Mantenedor
             this.dtFechaRegistro.Location = new System.Drawing.Point(426, 122);
             this.dtFechaRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.dtFechaRegistro.Name = "dtFechaRegistro";
-            this.dtFechaRegistro.Size = new System.Drawing.Size(151, 20);
+            this.dtFechaRegistro.Size = new System.Drawing.Size(214, 20);
             this.dtFechaRegistro.TabIndex = 13;
             // 
             // cbkEstadoCliente
@@ -166,42 +166,42 @@ namespace ProyectoFinal.Mantenedor
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(100, 214);
+            this.txtDni.Location = new System.Drawing.Point(107, 216);
             this.txtDni.Margin = new System.Windows.Forms.Padding(2);
             this.txtDni.Name = "txtDni";
-            this.txtDni.Size = new System.Drawing.Size(95, 20);
+            this.txtDni.Size = new System.Drawing.Size(239, 20);
             this.txtDni.TabIndex = 11;
             // 
             // txtCelular
             // 
-            this.txtCelular.Location = new System.Drawing.Point(100, 176);
+            this.txtCelular.Location = new System.Drawing.Point(107, 177);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(2);
             this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(95, 20);
+            this.txtCelular.Size = new System.Drawing.Size(239, 20);
             this.txtCelular.TabIndex = 10;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(100, 141);
+            this.txtDireccion.Location = new System.Drawing.Point(107, 145);
             this.txtDireccion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(185, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(239, 20);
             this.txtDireccion.TabIndex = 9;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(100, 106);
+            this.txtApellido.Location = new System.Drawing.Point(107, 110);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(150, 20);
+            this.txtApellido.Size = new System.Drawing.Size(239, 20);
             this.txtApellido.TabIndex = 8;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(100, 74);
+            this.txtNombre.Location = new System.Drawing.Point(107, 75);
             this.txtNombre.Margin = new System.Windows.Forms.Padding(2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(150, 20);
+            this.txtNombre.Size = new System.Drawing.Size(239, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // txtId
@@ -209,7 +209,7 @@ namespace ProyectoFinal.Mantenedor
             this.txtId.Location = new System.Drawing.Point(107, 36);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(88, 20);
+            this.txtId.Size = new System.Drawing.Size(239, 20);
             this.txtId.TabIndex = 6;
             // 
             // label6

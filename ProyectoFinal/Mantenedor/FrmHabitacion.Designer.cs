@@ -60,7 +60,7 @@ namespace ProyectoFinal.Mantenedor
             this.dgvHabitacion.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHabitacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHabitacion.Location = new System.Drawing.Point(23, 72);
-            this.dgvHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.dgvHabitacion.Name = "dgvHabitacion";
             this.dgvHabitacion.ReadOnly = true;
             this.dgvHabitacion.RowHeadersVisible = false;
@@ -87,10 +87,10 @@ namespace ProyectoFinal.Mantenedor
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(16, 292);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(532, 210);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(545, 210);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Habitacion";
@@ -101,7 +101,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnCancelar.IconColor = System.Drawing.Color.Black;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(407, 131);
+            this.btnCancelar.Location = new System.Drawing.Point(407, 145);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(120, 41);
             this.btnCancelar.TabIndex = 22;
@@ -116,7 +116,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnModificar.IconColor = System.Drawing.Color.Black;
             this.btnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificar.Location = new System.Drawing.Point(407, 74);
+            this.btnModificar.Location = new System.Drawing.Point(407, 88);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(120, 42);
             this.btnModificar.TabIndex = 21;
@@ -131,7 +131,7 @@ namespace ProyectoFinal.Mantenedor
             this.btnAgregar.IconColor = System.Drawing.Color.Black;
             this.btnAgregar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgregar.Location = new System.Drawing.Point(407, 17);
+            this.btnAgregar.Location = new System.Drawing.Point(407, 31);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(120, 41);
             this.btnAgregar.TabIndex = 16;
@@ -144,9 +144,9 @@ namespace ProyectoFinal.Mantenedor
             // 
             this.cmbidTipoHab.FormattingEnabled = true;
             this.cmbidTipoHab.Location = new System.Drawing.Point(128, 175);
-            this.cmbidTipoHab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbidTipoHab.Margin = new System.Windows.Forms.Padding(2);
             this.cmbidTipoHab.Name = "cmbidTipoHab";
-            this.cmbidTipoHab.Size = new System.Drawing.Size(98, 21);
+            this.cmbidTipoHab.Size = new System.Drawing.Size(256, 21);
             this.cmbidTipoHab.TabIndex = 20;
             // 
             // label5
@@ -167,34 +167,34 @@ namespace ProyectoFinal.Mantenedor
             "DISPONIBLE",
             "OCUPADO"});
             this.cmbDisponibilidad.Location = new System.Drawing.Point(128, 139);
-            this.cmbDisponibilidad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDisponibilidad.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDisponibilidad.Name = "cmbDisponibilidad";
-            this.cmbDisponibilidad.Size = new System.Drawing.Size(98, 21);
+            this.cmbDisponibilidad.Size = new System.Drawing.Size(256, 21);
             this.cmbDisponibilidad.TabIndex = 18;
             this.cmbDisponibilidad.Text = "SELECCIONAR";
             // 
             // txtNumPiso
             // 
             this.txtNumPiso.Location = new System.Drawing.Point(128, 107);
-            this.txtNumPiso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumPiso.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumPiso.Name = "txtNumPiso";
-            this.txtNumPiso.Size = new System.Drawing.Size(150, 20);
+            this.txtNumPiso.Size = new System.Drawing.Size(256, 20);
             this.txtNumPiso.TabIndex = 8;
             // 
             // txtNumHabitacion
             // 
             this.txtNumHabitacion.Location = new System.Drawing.Point(128, 74);
-            this.txtNumHabitacion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumHabitacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumHabitacion.Name = "txtNumHabitacion";
-            this.txtNumHabitacion.Size = new System.Drawing.Size(150, 20);
+            this.txtNumHabitacion.Size = new System.Drawing.Size(256, 20);
             this.txtNumHabitacion.TabIndex = 7;
             // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(128, 37);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(127, 20);
+            this.txtId.Size = new System.Drawing.Size(256, 20);
             this.txtId.TabIndex = 6;
             // 
             // label4
@@ -243,9 +243,9 @@ namespace ProyectoFinal.Mantenedor
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(593, 330);
+            this.btnNuevo.Location = new System.Drawing.Point(593, 323);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(106, 41);
+            this.btnNuevo.Size = new System.Drawing.Size(106, 48);
             this.btnNuevo.TabIndex = 13;
             this.btnNuevo.Text = "NUEVO";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -258,9 +258,9 @@ namespace ProyectoFinal.Mantenedor
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(593, 388);
+            this.btnEditar.Location = new System.Drawing.Point(593, 380);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(103, 41);
+            this.btnEditar.Size = new System.Drawing.Size(103, 49);
             this.btnEditar.TabIndex = 14;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -293,7 +293,7 @@ namespace ProyectoFinal.Mantenedor
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvHabitacion);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmHabitacion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HABITACIÓN";

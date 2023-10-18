@@ -31,6 +31,7 @@ namespace ProyectoFinal.Mantenedor
         {
             this.dgvTransacion = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
             this.txtNumCuenta = new System.Windows.Forms.TextBox();
@@ -44,7 +45,6 @@ namespace ProyectoFinal.Mantenedor
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.btnCancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacion)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -88,6 +88,21 @@ namespace ProyectoFinal.Mantenedor
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro Transaccion";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Xbox;
+            this.btnCancelar.IconColor = System.Drawing.Color.Black;
+            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(434, 133);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(115, 47);
+            this.btnCancelar.TabIndex = 26;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // btnModificar
             // 
             this.btnModificar.IconChar = FontAwesome.Sharp.IconChar.Wrench;
@@ -123,7 +138,7 @@ namespace ProyectoFinal.Mantenedor
             this.txtNumCuenta.Location = new System.Drawing.Point(143, 109);
             this.txtNumCuenta.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumCuenta.Name = "txtNumCuenta";
-            this.txtNumCuenta.Size = new System.Drawing.Size(148, 20);
+            this.txtNumCuenta.Size = new System.Drawing.Size(265, 20);
             this.txtNumCuenta.TabIndex = 28;
             // 
             // dtFecRegistro
@@ -131,7 +146,7 @@ namespace ProyectoFinal.Mantenedor
             this.dtFecRegistro.Location = new System.Drawing.Point(143, 144);
             this.dtFecRegistro.Margin = new System.Windows.Forms.Padding(2);
             this.dtFecRegistro.Name = "dtFecRegistro";
-            this.dtFecRegistro.Size = new System.Drawing.Size(151, 20);
+            this.dtFecRegistro.Size = new System.Drawing.Size(265, 20);
             this.dtFecRegistro.TabIndex = 27;
             // 
             // txtNumOperacion
@@ -139,7 +154,7 @@ namespace ProyectoFinal.Mantenedor
             this.txtNumOperacion.Location = new System.Drawing.Point(143, 70);
             this.txtNumOperacion.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumOperacion.Name = "txtNumOperacion";
-            this.txtNumOperacion.Size = new System.Drawing.Size(148, 20);
+            this.txtNumOperacion.Size = new System.Drawing.Size(265, 20);
             this.txtNumOperacion.TabIndex = 23;
             // 
             // label6
@@ -177,7 +192,7 @@ namespace ProyectoFinal.Mantenedor
             this.txtId.Location = new System.Drawing.Point(143, 37);
             this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(88, 20);
+            this.txtId.Size = new System.Drawing.Size(265, 20);
             this.txtId.TabIndex = 6;
             // 
             // label1
@@ -235,21 +250,6 @@ namespace ProyectoFinal.Mantenedor
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnCancelar
-            // 
-            this.btnCancelar.IconChar = FontAwesome.Sharp.IconChar.Xbox;
-            this.btnCancelar.IconColor = System.Drawing.Color.Black;
-            this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(434, 133);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(115, 47);
-            this.btnCancelar.TabIndex = 26;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
             // FrmTransaccion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -262,7 +262,7 @@ namespace ProyectoFinal.Mantenedor
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTransaccion";
-            this.Text = "FrmTransaccion";
+            this.Text = "TRANSACCIÓN";
             this.Load += new System.EventHandler(this.FrmTransaccion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransacion)).EndInit();
             this.groupBox1.ResumeLayout(false);

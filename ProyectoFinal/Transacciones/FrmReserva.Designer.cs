@@ -86,7 +86,7 @@ namespace ProyectoFinal.Transacciones
             this.dg_reservas.AllowUserToResizeColumns = false;
             this.dg_reservas.AllowUserToResizeRows = false;
             this.dg_reservas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg_reservas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dg_reservas.BackgroundColor = System.Drawing.Color.Silver;
             this.dg_reservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_reservas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -107,7 +107,7 @@ namespace ProyectoFinal.Transacciones
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_reservas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dg_reservas.EnableHeadersVisualStyles = false;
-            this.dg_reservas.Location = new System.Drawing.Point(9, 10);
+            this.dg_reservas.Location = new System.Drawing.Point(9, 72);
             this.dg_reservas.Margin = new System.Windows.Forms.Padding(2);
             this.dg_reservas.Name = "dg_reservas";
             this.dg_reservas.ReadOnly = true;
@@ -115,13 +115,13 @@ namespace ProyectoFinal.Transacciones
             this.dg_reservas.RowHeadersWidth = 51;
             this.dg_reservas.RowTemplate.Height = 24;
             this.dg_reservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_reservas.Size = new System.Drawing.Size(1085, 221);
+            this.dg_reservas.Size = new System.Drawing.Size(1117, 167);
             this.dg_reservas.TabIndex = 0;
             this.dg_reservas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dg_reservas_CellContentDoubleClick);
             // 
             // btn_nuevo
             // 
-            this.btn_nuevo.Location = new System.Drawing.Point(1120, 11);
+            this.btn_nuevo.Location = new System.Drawing.Point(1163, 76);
             this.btn_nuevo.Margin = new System.Windows.Forms.Padding(2);
             this.btn_nuevo.Name = "btn_nuevo";
             this.btn_nuevo.Size = new System.Drawing.Size(96, 44);
@@ -132,7 +132,7 @@ namespace ProyectoFinal.Transacciones
             // 
             // btn_editar
             // 
-            this.btn_editar.Location = new System.Drawing.Point(1120, 73);
+            this.btn_editar.Location = new System.Drawing.Point(1163, 138);
             this.btn_editar.Margin = new System.Windows.Forms.Padding(2);
             this.btn_editar.Name = "btn_editar";
             this.btn_editar.Size = new System.Drawing.Size(96, 44);
@@ -143,7 +143,7 @@ namespace ProyectoFinal.Transacciones
             // 
             // btn_salir
             // 
-            this.btn_salir.Location = new System.Drawing.Point(1120, 133);
+            this.btn_salir.Location = new System.Drawing.Point(1163, 198);
             this.btn_salir.Margin = new System.Windows.Forms.Padding(2);
             this.btn_salir.Name = "btn_salir";
             this.btn_salir.Size = new System.Drawing.Size(96, 44);
@@ -154,6 +154,7 @@ namespace ProyectoFinal.Transacciones
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.cm_formapago);
             this.groupBox1.Controls.Add(this.checkBoxEstado);
@@ -163,11 +164,11 @@ namespace ProyectoFinal.Transacciones
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txt_id_reserva);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(9, 244);
+            this.groupBox1.Location = new System.Drawing.Point(9, 260);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(600, 132);
+            this.groupBox1.Size = new System.Drawing.Size(608, 132);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registar Reserva";
@@ -295,13 +296,14 @@ namespace ProyectoFinal.Transacciones
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox2.Controls.Add(this.txt_numerohabitacion);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txt_idhabitacion);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.btnCambiarHabitacio);
             this.groupBox2.Controls.Add(this.btn_select_habitacion);
-            this.groupBox2.Location = new System.Drawing.Point(11, 380);
+            this.groupBox2.Location = new System.Drawing.Point(11, 419);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -371,13 +373,14 @@ namespace ProyectoFinal.Transacciones
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox3.Controls.Add(this.txt_nombre_cliente);
             this.groupBox3.Controls.Add(this.label7);
             this.groupBox3.Controls.Add(this.btnCambiarCliente);
             this.groupBox3.Controls.Add(this.btn_selec_cli);
             this.groupBox3.Controls.Add(this.txt_dni_cliente);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(313, 381);
+            this.groupBox3.Location = new System.Drawing.Point(321, 419);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
@@ -447,13 +450,14 @@ namespace ProyectoFinal.Transacciones
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox4.Controls.Add(this.btn_agregar_servicio);
             this.groupBox4.Controls.Add(this.label8);
             this.groupBox4.Controls.Add(this.cb_servicio);
             this.groupBox4.Controls.Add(this.dg_servicios);
-            this.groupBox4.Location = new System.Drawing.Point(614, 244);
+            this.groupBox4.Location = new System.Drawing.Point(633, 260);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(480, 341);
+            this.groupBox4.Size = new System.Drawing.Size(483, 364);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Servicios adicionales";
@@ -495,7 +499,7 @@ namespace ProyectoFinal.Transacciones
             this.dg_servicios.AllowUserToResizeColumns = false;
             this.dg_servicios.AllowUserToResizeRows = false;
             this.dg_servicios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dg_servicios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dg_servicios.BackgroundColor = System.Drawing.Color.Silver;
             this.dg_servicios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dg_servicios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -516,7 +520,7 @@ namespace ProyectoFinal.Transacciones
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dg_servicios.DefaultCellStyle = dataGridViewCellStyle4;
             this.dg_servicios.EnableHeadersVisualStyles = false;
-            this.dg_servicios.Location = new System.Drawing.Point(6, 19);
+            this.dg_servicios.Location = new System.Drawing.Point(17, 28);
             this.dg_servicios.Name = "dg_servicios";
             this.dg_servicios.ReadOnly = true;
             this.dg_servicios.RowHeadersVisible = false;
@@ -526,12 +530,13 @@ namespace ProyectoFinal.Transacciones
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.DarkSlateGray;
             this.groupBox5.Controls.Add(this.btn_grabar);
             this.groupBox5.Controls.Add(this.btn_cancelar);
             this.groupBox5.Controls.Add(this.btn_modificar);
-            this.groupBox5.Location = new System.Drawing.Point(1103, 253);
+            this.groupBox5.Location = new System.Drawing.Point(1146, 260);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(143, 341);
+            this.groupBox5.Size = new System.Drawing.Size(143, 364);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Opciones";
@@ -541,7 +546,7 @@ namespace ProyectoFinal.Transacciones
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(1257, 597);
+            this.ClientSize = new System.Drawing.Size(1318, 649);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -551,11 +556,11 @@ namespace ProyectoFinal.Transacciones
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.dg_reservas);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmReserva";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmReserva";
+            this.Load += new System.EventHandler(this.FrmReserva_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_reservas)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
