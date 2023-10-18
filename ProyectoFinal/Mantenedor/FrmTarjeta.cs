@@ -21,5 +21,10 @@ namespace ProyectoFinal.Mantenedor
         {
 
         }
+
+        private void FrmTarjeta_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

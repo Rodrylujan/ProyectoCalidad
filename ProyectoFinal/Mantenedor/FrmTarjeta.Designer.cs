@@ -278,6 +278,7 @@ namespace ProyectoFinal.Mantenedor
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmTarjeta";
             this.Text = "FrmTarjeta";
+            this.Load += new System.EventHandler(this.FrmTarjeta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarjeta)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -123,6 +123,7 @@ namespace ProyectoFinal.Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNuevaPass";
             this.Text = "FrmNuevaPass";
+            this.Load += new System.EventHandler(this.FrmNuevaPass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
