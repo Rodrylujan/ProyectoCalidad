@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmTarjeta : Form
+    public partial class FrmTarjeta : MaterialSkin.Controls.MaterialForm
     {
         public FrmTarjeta()
         {
@@ -18,6 +18,16 @@ namespace ProyectoFinal.Mantenedor
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtFecVencimiento_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmTarjeta_Load(object sender, EventArgs e)
         {
 
         }
