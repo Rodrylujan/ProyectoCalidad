@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using entRol;
 using ProyectoFinal.Mantenedor;
 using ProyectoFinal.Transacciones;
 
@@ -14,9 +15,15 @@ namespace ProyectoFinal.Principal
 {
     public partial class FrmPrincipal : Form
     {
-        public FrmPrincipal()
+        private int rol;
+        public FrmPrincipal(int rol)
         {
             InitializeComponent();
+            this.rol = rol;
+            if (rol != 1)
+            {
+                btnUsers.Visible = false;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +62,12 @@ namespace ProyectoFinal.Principal
         {
             FrmComprobantes frmComprobantes = new FrmComprobantes();
             frmComprobantes.Show();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            FrmUsers frmUsers = new FrmUsers();
+            frmUsers.Show();
         }
     }
 }

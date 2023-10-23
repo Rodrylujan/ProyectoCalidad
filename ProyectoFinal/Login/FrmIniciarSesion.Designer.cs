@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbIntentos = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.txbPassword = new System.Windows.Forms.TextBox();
+            this.txbContra = new System.Windows.Forms.TextBox();
             this.txbUser = new System.Windows.Forms.TextBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
@@ -49,24 +49,13 @@
             this.panelPrincipal.Controls.Add(this.label3);
             this.panelPrincipal.Controls.Add(this.lbIntentos);
             this.panelPrincipal.Controls.Add(this.btnLogin);
-            this.panelPrincipal.Controls.Add(this.txbPassword);
+            this.panelPrincipal.Controls.Add(this.txbContra);
             this.panelPrincipal.Controls.Add(this.txbUser);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelPrincipal.Location = new System.Drawing.Point(0, 0);
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(500, 450);
             this.panelPrincipal.TabIndex = 14;
-            this.panelPrincipal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPrincipal_Paint);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ProyectoFinal.Properties.Resources.cerrar_con_llave;
-            this.pictureBox3.Location = new System.Drawing.Point(89, 221);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -111,19 +100,20 @@
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // txbPassword
+            // txbContra
             // 
-            this.txbPassword.BackColor = System.Drawing.Color.White;
-            this.txbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
-            this.txbPassword.Location = new System.Drawing.Point(160, 233);
-            this.txbPassword.Name = "txbPassword";
-            this.txbPassword.Size = new System.Drawing.Size(241, 26);
-            this.txbPassword.TabIndex = 4;
-            this.txbPassword.Tag = "";
-            this.txbPassword.Enter += new System.EventHandler(this.txbPassword_Enter);
-            this.txbPassword.Leave += new System.EventHandler(this.txbPassword_Leave);
+            this.txbContra.BackColor = System.Drawing.Color.White;
+            this.txbContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(144)))), ((int)(((byte)(144)))), ((int)(((byte)(144)))));
+            this.txbContra.Location = new System.Drawing.Point(160, 233);
+            this.txbContra.Name = "txbContra";
+            this.txbContra.Size = new System.Drawing.Size(241, 26);
+            this.txbContra.TabIndex = 4;
+            this.txbContra.Tag = "";
+            this.txbContra.Enter += new System.EventHandler(this.txbPassword_Enter);
+            this.txbContra.Leave += new System.EventHandler(this.txbPassword_Leave);
             // 
             // txbUser
             // 
@@ -138,6 +128,16 @@
             this.txbUser.Enter += new System.EventHandler(this.txbUser_Enter);
             this.txbUser.Leave += new System.EventHandler(this.txbUser_Leave);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProyectoFinal.Properties.Resources.cerrar_con_llave;
+            this.pictureBox3.Location = new System.Drawing.Point(89, 221);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            // 
             // FrmIniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -145,13 +145,12 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 450);
             this.Controls.Add(this.panelPrincipal);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmIniciarSesion";
             this.Text = "FrmIniciarSesion";
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -159,12 +158,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panelPrincipal;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbIntentos;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.TextBox txbPassword;
+        private System.Windows.Forms.TextBox txbContra;
         private System.Windows.Forms.TextBox txbUser;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

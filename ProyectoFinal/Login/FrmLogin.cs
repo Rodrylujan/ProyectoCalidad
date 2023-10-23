@@ -35,20 +35,16 @@ namespace ProyectoFinal.Login
         {
             btnAtras.Visible = true;
             btnSalir.Visible = false;
-            AbrirFormHijo(new FrmCambiarPass());
-        }
-
-        private void lbOlvidePasss_Click(object sender, EventArgs e)
-        {
-            FrmOlvidePass frmOlvidePass = new FrmOlvidePass();
-            frmOlvidePass.Show();
+            FrmCambiarPass frmCambiarPass = new FrmCambiarPass();
+            frmCambiarPass.Owner = this; // Establece a FrmLogin como propietario
+            AbrirFormHijo(frmCambiarPass);
         }
 
         /// <summary>
         /// Carga un formulario dentro de un panel en el formulario principal
         /// </summary>
         /// <param name="formhijo"> Formulario que se mostrara</param>
-        private void AbrirFormHijo(Form formhijo)
+        public void AbrirFormHijo(Form formhijo)
         {
             if (FormActivo != null)
                 FormActivo.Close();
@@ -60,12 +56,20 @@ namespace ProyectoFinal.Login
             panelPrincipal.Tag = formhijo;
             formhijo.BringToFront();
             formhijo.Show();
-            
+            if (formhijo is FrmIniciarSesion)
+            {
+                btnAtras.Visible = false;
+                btnSalir.Visible = true;
+            }
         }
+
         private void FormHijo_FormCerrado(object sender, EventArgs e)
         {
             // Cuando se cierre el formulario hijo, también cierra el formulario principal
-            this.Close();
+            if (FormActivo is FrmIniciarSesion)
+            {
+                this.Close();
+            }
         }
 
         private void FormHijo_FormCerradoAtras(object sender, EventArgs e)

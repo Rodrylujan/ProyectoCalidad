@@ -31,17 +31,17 @@ namespace ProyectoFinal.Login
         {
             this.txbUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSiguiente = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.PanelUserPassword = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txbPasswordActual = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panelNewPassword = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txbConfirmPassword = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -50,10 +50,11 @@ namespace ProyectoFinal.Login
             this.panel11 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.txbNewPassword = new System.Windows.Forms.TextBox();
+            this.lbMessage = new System.Windows.Forms.Label();
             this.PanelUserPassword.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panelNewPassword.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -79,18 +80,18 @@ namespace ProyectoFinal.Login
             this.label1.TabIndex = 8;
             this.label1.Text = "Usuario";
             // 
-            // btnActualizar
+            // btnSiguiente
             // 
-            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnActualizar.FlatAppearance.BorderSize = 0;
-            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(168, 39);
-            this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(120, 40);
-            this.btnActualizar.TabIndex = 14;
-            this.btnActualizar.Text = "SIGUIENTE";
-            this.btnActualizar.UseVisualStyleBackColor = true;
-            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            this.btnSiguiente.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnSiguiente.FlatAppearance.BorderSize = 0;
+            this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguiente.Location = new System.Drawing.Point(168, 39);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(120, 40);
+            this.btnSiguiente.TabIndex = 14;
+            this.btnSiguiente.Text = "SIGUIENTE";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // label4
             // 
@@ -113,19 +114,9 @@ namespace ProyectoFinal.Login
             this.PanelUserPassword.Size = new System.Drawing.Size(453, 190);
             this.PanelUserPassword.TabIndex = 17;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txbUser);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(453, 50);
-            this.panel2.TabIndex = 0;
-            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.btnActualizar);
+            this.panel4.Controls.Add(this.btnSiguiente);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 100);
             this.panel4.Name = "panel4";
@@ -160,13 +151,23 @@ namespace ProyectoFinal.Login
             this.txbPasswordActual.Size = new System.Drawing.Size(208, 26);
             this.txbPasswordActual.TabIndex = 9;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txbUser);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(453, 50);
+            this.panel2.TabIndex = 0;
+            // 
             // panelNewPassword
             // 
             this.panelNewPassword.Controls.Add(this.panel8);
             this.panelNewPassword.Controls.Add(this.panel9);
             this.panelNewPassword.Controls.Add(this.lbMesage);
             this.panelNewPassword.Controls.Add(this.panel11);
-            this.panelNewPassword.Location = new System.Drawing.Point(35, 429);
+            this.panelNewPassword.Location = new System.Drawing.Point(32, 248);
             this.panelNewPassword.Name = "panelNewPassword";
             this.panelNewPassword.Size = new System.Drawing.Size(453, 222);
             this.panelNewPassword.TabIndex = 18;
@@ -174,24 +175,25 @@ namespace ProyectoFinal.Login
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.button1);
+            this.panel8.Controls.Add(this.btnActualizar);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 160);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(453, 60);
             this.panel8.TabIndex = 4;
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(168, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(120, 40);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(168, 12);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(120, 40);
+            this.btnActualizar.TabIndex = 14;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // panel9
             // 
@@ -266,12 +268,25 @@ namespace ProyectoFinal.Login
             this.txbNewPassword.Size = new System.Drawing.Size(208, 26);
             this.txbNewPassword.TabIndex = 11;
             // 
+            // lbMessage
+            // 
+            this.lbMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMessage.ForeColor = System.Drawing.Color.Red;
+            this.lbMessage.Location = new System.Drawing.Point(118, 103);
+            this.lbMessage.Name = "lbMessage";
+            this.lbMessage.Size = new System.Drawing.Size(238, 23);
+            this.lbMessage.TabIndex = 19;
+            this.lbMessage.Text = "Usuario o contraseña incorrectos";
+            this.lbMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbMessage.Visible = false;
+            // 
             // FrmCambiarPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(500, 450);
+            this.Controls.Add(this.lbMessage);
             this.Controls.Add(this.panelNewPassword);
             this.Controls.Add(this.PanelUserPassword);
             this.Controls.Add(this.label4);
@@ -280,11 +295,11 @@ namespace ProyectoFinal.Login
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCambiarPass";
             this.PanelUserPassword.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panelNewPassword.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -300,7 +315,7 @@ namespace ProyectoFinal.Login
         #endregion
         private System.Windows.Forms.TextBox txbUser;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel PanelUserPassword;
         private System.Windows.Forms.Panel panel2;
@@ -310,7 +325,7 @@ namespace ProyectoFinal.Login
         private System.Windows.Forms.TextBox txbPasswordActual;
         private System.Windows.Forms.Panel panelNewPassword;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txbConfirmPassword;
         private System.Windows.Forms.Label label6;
@@ -319,5 +334,6 @@ namespace ProyectoFinal.Login
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbNewPassword;
+        private System.Windows.Forms.Label lbMessage;
     }
 }

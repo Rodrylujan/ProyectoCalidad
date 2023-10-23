@@ -80,18 +80,6 @@
     <Compile Include="Login\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\FrmNuevaPass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\FrmNuevaPass.Designer.cs">
-      <DependentUpon>FrmNuevaPass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login\FrmOlvidePass.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\FrmOlvidePass.Designer.cs">
-      <DependentUpon>FrmOlvidePass.cs</DependentUpon>
-    </Compile>
     <Compile Include="Mantenedor\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +115,12 @@
     </Compile>
     <Compile Include="Mantenedor\FrmTransaccion.Designer.cs">
       <DependentUpon>FrmTransaccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mantenedor\FrmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mantenedor\FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal\FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -175,12 +169,6 @@
     <EmbeddedResource Include="Login\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\FrmNuevaPass.resx">
-      <DependentUpon>FrmNuevaPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login\FrmOlvidePass.resx">
-      <DependentUpon>FrmOlvidePass.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedor\FrmTransaccion.resx">
       <DependentUpon>FrmTransaccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mantenedor\FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -269,6 +260,10 @@
       <Project>{e2ae130c-2650-4617-b78f-7bdf66ca9811}</Project>
       <Name>entReserva</Name>
     </ProjectReference>
+    <ProjectReference Include="..\entRol\entRol.csproj">
+      <Project>{8d14bf08-7d94-4c1f-9d0f-98add262fce9}</Project>
+      <Name>entRol</Name>
+    </ProjectReference>
     <ProjectReference Include="..\entServicio\entServicio.csproj">
       <Project>{aca7d1ca-78e8-490f-ab41-3d1142f9f1db}</Project>
       <Name>entServicio</Name>
@@ -280,6 +275,10 @@
     <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
       <Project>{e11ce4fb-30bc-4a56-ba5d-d634b79eee74}</Project>
       <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entUser\entUser.csproj">
+      <Project>{f4e676f4-79df-418c-b071-5e5ad04eba0c}</Project>
+      <Name>entUser</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogicaNegocio\LogicaNegocio.csproj">
       <Project>{06ea1147-6991-474d-afb8-42373440b279}</Project>

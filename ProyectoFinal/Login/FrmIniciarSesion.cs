@@ -1,4 +1,7 @@
-﻿using System;
+﻿using entUser;
+using LogicaNegocio.MantenedorUser;
+using ProyectoFinal.Principal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,9 +33,9 @@ namespace ProyectoFinal.Login
             txbUser.Text = messageUserDefect;
             txbUser.ForeColor = colorMessage;
 
-            txbPassword.Text = messagePasswordDefect;
-            txbPassword.ForeColor = colorMessage;
-            txbPassword.PasswordChar = '\0';
+            txbContra.Text = messagePasswordDefect;
+            txbContra.ForeColor = colorMessage;
+            txbContra.PasswordChar = '\0';
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -58,27 +61,49 @@ namespace ProyectoFinal.Login
 
         private void txbPassword_Enter(object sender, EventArgs e)
         {
-            if (txbPassword.Text == messagePasswordDefect)
+            if (txbContra.Text == messagePasswordDefect)
             {
-                txbPassword.Text = "";
-                txbPassword.ForeColor = colorText;
-                txbPassword.PasswordChar = '*';
+                txbContra.Text = "";
+                txbContra.ForeColor = colorText;
+                txbContra.PasswordChar = '*';
             }
         }
 
         private void txbPassword_Leave(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txbPassword.Text))
+            if (string.IsNullOrWhiteSpace(txbContra.Text))
             {
-                txbPassword.Text = messagePasswordDefect;
-                txbPassword.ForeColor = colorMessage;
-                txbPassword.PasswordChar = '\0';
+                txbContra.Text = messagePasswordDefect;
+                txbContra.ForeColor = colorMessage;
+                txbContra.PasswordChar = '\0';
             }
         }
 
-        private void panelPrincipal_Paint(object sender, PaintEventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            string user = txbUser.Text;
+            string contra = txbContra.Text;
+            int estado = 0;
 
+            if (user != null && contra != null)
+            {
+                estado = logUser.Instancia.validarInicioSesion(user, contra);
+            }
+            else if (contra == "" && user == "") MessageBox.Show("complete los campos");
+            else if (user == "") MessageBox.Show("Ingrese su usuario");
+            else MessageBox.Show("Ingrese su contraseña");
+            if (estado >= 1)
+            {
+                this.Hide();
+                int id_rol_user = logUser.Instancia.buscarUsuario(estado).id_rol;
+                FrmPrincipal principal = new FrmPrincipal(id_rol_user);
+                principal.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Contraseña o usuario no validos");
+            }
         }
     }
 }

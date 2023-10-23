@@ -47,9 +47,11 @@
     <Compile Include="DaoEntidades\datHabitacion.cs" />
     <Compile Include="DaoEntidades\datHospedaje.cs" />
     <Compile Include="DaoEntidades\datReserva.cs" />
+    <Compile Include="DaoEntidades\datRol.cs" />
     <Compile Include="DaoEntidades\datServicio.cs" />
     <Compile Include="DaoEntidades\datTarjeta.cs" />
     <Compile Include="DaoEntidades\datTipoHabitacion.cs" />
+    <Compile Include="DaoEntidades\datUser.cs" />
     <Compile Include="DataBase\Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -81,6 +83,10 @@
       <Project>{e2ae130c-2650-4617-b78f-7bdf66ca9811}</Project>
       <Name>entReserva</Name>
     </ProjectReference>
+    <ProjectReference Include="..\entRol\entRol.csproj">
+      <Project>{8d14bf08-7d94-4c1f-9d0f-98add262fce9}</Project>
+      <Name>entRol</Name>
+    </ProjectReference>
     <ProjectReference Include="..\entServicio\entServicio.csproj">
       <Project>{aca7d1ca-78e8-490f-ab41-3d1142f9f1db}</Project>
       <Name>entServicio</Name>
@@ -92,6 +98,10 @@
     <ProjectReference Include="..\entTipoHabitacion\entTipoHabitacion.csproj">
       <Project>{e11ce4fb-30bc-4a56-ba5d-d634b79eee74}</Project>
       <Name>entTipoHabitacion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\entUser\entUser.csproj">
+      <Project>{f4e676f4-79df-418c-b071-5e5ad04eba0c}</Project>
+      <Name>entUser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
