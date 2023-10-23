@@ -1,5 +1,6 @@
 ﻿using entUser;
 using LogicaNegocio.MantenedorUser;
+using ProyectoFinal.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,8 +34,7 @@ namespace ProyectoFinal.Login
             string condiciones = "";
             condiciones = "- Minimo 8 caracteres\n" +
                             "- Debe incluir un numero, una mayuscula y una minuscula\n" +
-                            "- Solo incluir los siguientes caracteres especales: # @ %\n" +
-                            "- Minimo 8 caracteres\n";
+                            "- Solo incluir los siguientes caracteres especales: # @ %\n";
             lbContraseñas.Text = condiciones;
             lbMesage.Visible = true;
         }
@@ -80,23 +81,67 @@ namespace ProyectoFinal.Login
             {
                 if (txbNewPassword.Text== txbConfirmPassword.Text)
                 {
-                    usuario.password = txbNewPassword.Text;
-                    logUser.Instancia.editarUsuario(usuario);
-                    //AQUI SE CAMBIO DE CONTRASEÑA CORRECTAMENTE
-                    // Muestra FrmIniciarSesion en el formulario principal FrmLogin
-                    FrmLogin frmLogin = (FrmLogin)this.Owner;
-                    if (frmLogin != null)
+                    if (ValidarContraseña(txbNewPassword.Text))
                     {
-                        frmLogin.AbrirFormHijo(new FrmIniciarSesion());
-                    }
+                        usuario.password = txbNewPassword.Text;
+                        logUser.Instancia.editarUsuario(usuario);
+                        //AQUI SE CAMBIO DE CONTRASEÑA CORRECTAMENTE
+                        // Muestra FrmIniciarSesion en el formulario principal FrmLogin
+                        FrmLogin frmLogin = (FrmLogin)this.Owner;
+                        if (frmLogin != null)
+                        {
+                            frmLogin.AbrirFormHijo(new FrmIniciarSesion());
+                        }
 
-                    // Cierra el formulario actual (FrmCambiarPass)
-                    this.Close();
+                        // Cierra el formulario actual (FrmCambiarPass)
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No cumples con los requisitos minimos para la contraseña");
+                    }
                 }
                 else
                 {
                     MessageBox.Show("Contraseña incorrecta");
                 }
+            }
+        }
+        public bool ValidarContraseña(string contraseña)
+        {
+            // Comprueba si la contraseña tiene al menos 8 caracteres.
+            if (contraseña.Length < 8)
+                return false;
+
+            // Comprueba si la contraseña contiene al menos una letra minúscula.
+            if (!Regex.IsMatch(contraseña, @"[a-z]"))
+                return false;
+
+            // Comprueba si la contraseña contiene al menos una letra mayúscula.
+            if (!Regex.IsMatch(contraseña, @"[A-Z]"))
+                return false;
+
+            // Comprueba si la contraseña contiene al menos un número.
+            if (!Regex.IsMatch(contraseña, @"[0-9]"))
+                return false;
+
+            // Comprueba si la contraseña solo contiene los caracteres especiales permitidos.
+            if (!Regex.IsMatch(contraseña, @"^[#@%a-zA-Z0-9]+$"))
+                return false;
+
+            return true;
+        }
+
+        private void txbNewPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            verificacion.Visible = true;
+            if (ValidarContraseña(txbNewPassword.Text))
+            {
+                verificacion.Image = Resources.Correcto;
+            }
+            else
+            {
+                verificacion.Image = Resources.Incorrecto;
             }
         }
     }

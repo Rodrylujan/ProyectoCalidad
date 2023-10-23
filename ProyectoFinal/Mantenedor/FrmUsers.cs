@@ -3,6 +3,7 @@ using entUser;
 using LogicaNegocio.Mantenedor;
 using LogicaNegocio.MantenedorRol;
 using LogicaNegocio.MantenedorUser;
+using ProyectoFinal.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +11,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -138,6 +140,43 @@ namespace ProyectoFinal.Mantenedor
                 txtApellido.Text = filaActual.Cells[2].Value.ToString();
                 cmbRol.SelectedIndex= cmbRol.FindString(filaActual.Cells[3].Value.ToString());
                 cbkEstadoCliente.Checked = Convert.ToBoolean(filaActual.Cells[4].Value);
+            }
+        }
+        public bool ValidarContraseña(string contraseña)
+        {
+            // Comprueba si la contraseña tiene al menos 8 caracteres.
+            if (contraseña.Length < 8)
+                return false;
+
+            // Comprueba si la contraseña contiene al menos una letra minúscula.
+            if (!Regex.IsMatch(contraseña, @"[a-z]"))
+                return false;
+
+            // Comprueba si la contraseña contiene al menos una letra mayúscula.
+            if (!Regex.IsMatch(contraseña, @"[A-Z]"))
+                return false;
+
+            // Comprueba si la contraseña contiene al menos un número.
+            if (!Regex.IsMatch(contraseña, @"[0-9]"))
+                return false;
+
+            // Comprueba si la contraseña solo contiene los caracteres especiales permitidos.
+            if (!Regex.IsMatch(contraseña, @"^[#@%a-zA-Z0-9]+$"))
+                return false;
+
+            return true;
+        }
+
+        private void txtApellido_KeyUp(object sender, KeyEventArgs e)
+        {
+            verificacion.Visible = true;
+            if (ValidarContraseña(txtApellido.Text))
+            {
+                verificacion.Image = Resources.Correcto;
+            }
+            else
+            {
+                verificacion.Image = Resources.Incorrecto;
             }
         }
     }

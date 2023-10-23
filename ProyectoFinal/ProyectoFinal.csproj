@@ -312,5 +312,11 @@
   <ItemGroup>
     <None Include="Resources\fondo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Correcto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Incorrecto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

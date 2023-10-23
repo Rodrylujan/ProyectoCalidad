@@ -32,6 +32,7 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbRol = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
             this.btnAgregar = new FontAwesome.Sharp.IconButton();
@@ -44,9 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.cmbRol = new System.Windows.Forms.ComboBox();
+            this.verificacion = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verificacion)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvUsers
@@ -101,6 +103,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.verificacion);
             this.groupBox1.Controls.Add(this.cmbRol);
             this.groupBox1.Controls.Add(this.btnCancelar);
             this.groupBox1.Controls.Add(this.btnModificar);
@@ -121,6 +124,16 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro User";
+            // 
+            // cmbRol
+            // 
+            this.cmbRol.FormattingEnabled = true;
+            this.cmbRol.Location = new System.Drawing.Point(107, 145);
+            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbRol.Name = "cmbRol";
+            this.cmbRol.Size = new System.Drawing.Size(239, 21);
+            this.cmbRol.TabIndex = 19;
+            this.cmbRol.Text = "SELECCIONAR";
             // 
             // btnCancelar
             // 
@@ -185,8 +198,10 @@
             this.txtApellido.Location = new System.Drawing.Point(107, 110);
             this.txtApellido.Margin = new System.Windows.Forms.Padding(2);
             this.txtApellido.Name = "txtApellido";
+            this.txtApellido.PasswordChar = '*';
             this.txtApellido.Size = new System.Drawing.Size(239, 20);
             this.txtApellido.TabIndex = 8;
+            this.txtApellido.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtApellido_KeyUp);
             // 
             // txtNombre
             // 
@@ -261,15 +276,16 @@
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cmbRol
+            // verificacion
             // 
-            this.cmbRol.FormattingEnabled = true;
-            this.cmbRol.Location = new System.Drawing.Point(107, 145);
-            this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbRol.Name = "cmbRol";
-            this.cmbRol.Size = new System.Drawing.Size(239, 21);
-            this.cmbRol.TabIndex = 19;
-            this.cmbRol.Text = "SELECCIONAR";
+            this.verificacion.Image = global::ProyectoFinal.Properties.Resources.Incorrecto;
+            this.verificacion.Location = new System.Drawing.Point(353, 107);
+            this.verificacion.Name = "verificacion";
+            this.verificacion.Size = new System.Drawing.Size(27, 28);
+            this.verificacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.verificacion.TabIndex = 20;
+            this.verificacion.TabStop = false;
+            this.verificacion.Visible = false;
             // 
             // FrmUsers
             // 
@@ -286,6 +302,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verificacion)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,5 +326,6 @@
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnSalir;
         private System.Windows.Forms.ComboBox cmbRol;
+        private System.Windows.Forms.PictureBox verificacion;
     }
 }

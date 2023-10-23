@@ -103,6 +103,16 @@ namespace ProyectoFinal.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Correcto {
+            get {
+                object obj = ResourceManager.GetObject("Correcto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cropped_h_central_full_1 {
             get {
                 object obj = ResourceManager.GetObject("cropped-h_central_full-1", resourceCulture);
@@ -126,6 +136,16 @@ namespace ProyectoFinal.Properties {
         internal static System.Drawing.Bitmap hotelcentra {
             get {
                 object obj = ResourceManager.GetObject("hotelcentra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Incorrecto {
+            get {
+                object obj = ResourceManager.GetObject("Incorrecto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

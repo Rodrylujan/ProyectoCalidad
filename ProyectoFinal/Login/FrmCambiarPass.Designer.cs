@@ -51,6 +51,7 @@ namespace ProyectoFinal.Login
             this.label8 = new System.Windows.Forms.Label();
             this.txbNewPassword = new System.Windows.Forms.TextBox();
             this.lbMessage = new System.Windows.Forms.Label();
+            this.verificacion = new System.Windows.Forms.PictureBox();
             this.PanelUserPassword.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -60,6 +61,7 @@ namespace ProyectoFinal.Login
             this.panel9.SuspendLayout();
             this.lbMesage.SuspendLayout();
             this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verificacion)).BeginInit();
             this.SuspendLayout();
             // 
             // txbUser
@@ -67,7 +69,6 @@ namespace ProyectoFinal.Login
             this.txbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbUser.Location = new System.Drawing.Point(177, 11);
             this.txbUser.Name = "txbUser";
-            this.txbUser.PasswordChar = '*';
             this.txbUser.Size = new System.Drawing.Size(208, 26);
             this.txbUser.TabIndex = 9;
             // 
@@ -242,6 +243,7 @@ namespace ProyectoFinal.Login
             // 
             // panel11
             // 
+            this.panel11.Controls.Add(this.verificacion);
             this.panel11.Controls.Add(this.label8);
             this.panel11.Controls.Add(this.txbNewPassword);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
@@ -267,6 +269,7 @@ namespace ProyectoFinal.Login
             this.txbNewPassword.PasswordChar = '*';
             this.txbNewPassword.Size = new System.Drawing.Size(208, 26);
             this.txbNewPassword.TabIndex = 11;
+            this.txbNewPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txbNewPassword_KeyUp);
             // 
             // lbMessage
             // 
@@ -279,6 +282,17 @@ namespace ProyectoFinal.Login
             this.lbMessage.Text = "Usuario o contraseña incorrectos";
             this.lbMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbMessage.Visible = false;
+            // 
+            // verificacion
+            // 
+            this.verificacion.Image = global::ProyectoFinal.Properties.Resources.Incorrecto;
+            this.verificacion.Location = new System.Drawing.Point(391, 3);
+            this.verificacion.Name = "verificacion";
+            this.verificacion.Size = new System.Drawing.Size(37, 32);
+            this.verificacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.verificacion.TabIndex = 14;
+            this.verificacion.TabStop = false;
+            this.verificacion.Visible = false;
             // 
             // FrmCambiarPass
             // 
@@ -307,6 +321,7 @@ namespace ProyectoFinal.Login
             this.lbMesage.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.verificacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +350,6 @@ namespace ProyectoFinal.Login
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txbNewPassword;
         private System.Windows.Forms.Label lbMessage;
+        private System.Windows.Forms.PictureBox verificacion;
     }
 }
