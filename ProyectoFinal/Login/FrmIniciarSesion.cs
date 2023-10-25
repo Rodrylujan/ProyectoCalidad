@@ -171,6 +171,7 @@ namespace ProyectoFinal.Login
             }
 
             string dateBloqueado = Properties.Settings.Default.DateBloque;
+            dateBloqueado = "";
             DateTime horaDesbloque=DateTime.Now;
             if (dateBloqueado!="")
                 horaDesbloque = Convert.ToDateTime(dateBloqueado);
