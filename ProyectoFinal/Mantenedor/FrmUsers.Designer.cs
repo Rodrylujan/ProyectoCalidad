@@ -32,6 +32,7 @@
             this.btnEditar = new FontAwesome.Sharp.IconButton();
             this.btnNuevo = new FontAwesome.Sharp.IconButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.verificacion = new System.Windows.Forms.PictureBox();
             this.cmbRol = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             this.btnModificar = new FontAwesome.Sharp.IconButton();
@@ -45,7 +46,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSalir = new FontAwesome.Sharp.IconButton();
-            this.verificacion = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.verificacion)).BeginInit();
@@ -59,7 +59,7 @@
             this.dgvUsers.AllowUserToResizeRows = false;
             this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(11, 11);
+            this.dgvUsers.Location = new System.Drawing.Point(11, 69);
             this.dgvUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
@@ -76,7 +76,7 @@
             this.btnEditar.IconColor = System.Drawing.Color.Black;
             this.btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(715, 98);
+            this.btnEditar.Location = new System.Drawing.Point(715, 212);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(103, 50);
             this.btnEditar.TabIndex = 11;
@@ -91,7 +91,7 @@
             this.btnNuevo.IconColor = System.Drawing.Color.Black;
             this.btnNuevo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(715, 14);
+            this.btnNuevo.Location = new System.Drawing.Point(715, 112);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(106, 48);
             this.btnNuevo.TabIndex = 10;
@@ -116,7 +116,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(11, 259);
+            this.groupBox1.Location = new System.Drawing.Point(11, 284);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -124,6 +124,17 @@
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Registro User";
+            // 
+            // verificacion
+            // 
+            this.verificacion.Image = global::ProyectoFinal.Properties.Resources.Incorrecto;
+            this.verificacion.Location = new System.Drawing.Point(353, 107);
+            this.verificacion.Name = "verificacion";
+            this.verificacion.Size = new System.Drawing.Size(27, 28);
+            this.verificacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.verificacion.TabIndex = 20;
+            this.verificacion.TabStop = false;
+            this.verificacion.Visible = false;
             // 
             // cmbRol
             // 
@@ -267,7 +278,7 @@
             this.btnSalir.IconColor = System.Drawing.Color.Black;
             this.btnSalir.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(718, 447);
+            this.btnSalir.Location = new System.Drawing.Point(715, 411);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(103, 55);
             this.btnSalir.TabIndex = 13;
@@ -275,17 +286,6 @@
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // verificacion
-            // 
-            this.verificacion.Image = global::ProyectoFinal.Properties.Resources.Incorrecto;
-            this.verificacion.Location = new System.Drawing.Point(353, 107);
-            this.verificacion.Name = "verificacion";
-            this.verificacion.Size = new System.Drawing.Size(27, 28);
-            this.verificacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.verificacion.TabIndex = 20;
-            this.verificacion.TabStop = false;
-            this.verificacion.Visible = false;
             // 
             // FrmUsers
             // 
@@ -298,7 +298,8 @@
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dgvUsers);
             this.Name = "FrmUsers";
-            this.Text = "FrmUsers";
+            this.Text = "USUARIOS";
+            this.Load += new System.EventHandler(this.FrmUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

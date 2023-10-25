@@ -17,7 +17,7 @@ using System.Windows.Forms;
 
 namespace ProyectoFinal.Mantenedor
 {
-    public partial class FrmUsers : Form
+    public partial class FrmUsers : MaterialSkin.Controls.MaterialForm
     {
         public FrmUsers()
         {
@@ -178,6 +178,11 @@ namespace ProyectoFinal.Mantenedor
             {
                 verificacion.Image = Resources.Incorrecto;
             }
+        }
+
+        private void FrmUsers_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
