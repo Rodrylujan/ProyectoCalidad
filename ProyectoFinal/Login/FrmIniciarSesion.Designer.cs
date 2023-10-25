@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.RecordarUser = new System.Windows.Forms.CheckBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbIntentos = new System.Windows.Forms.Label();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.txbContra = new System.Windows.Forms.TextBox();
             this.txbUser = new System.Windows.Forms.TextBox();
-            this.RecordarUser = new System.Windows.Forms.CheckBox();
+            this.horaFecha = new System.Windows.Forms.Timer(this.components);
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.panelPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -45,12 +47,12 @@
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.White;
+            this.panelPrincipal.Controls.Add(this.btnIniciarSesion);
             this.panelPrincipal.Controls.Add(this.RecordarUser);
             this.panelPrincipal.Controls.Add(this.pictureBox3);
             this.panelPrincipal.Controls.Add(this.pictureBox2);
             this.panelPrincipal.Controls.Add(this.label3);
             this.panelPrincipal.Controls.Add(this.lbIntentos);
-            this.panelPrincipal.Controls.Add(this.btnLogin);
             this.panelPrincipal.Controls.Add(this.txbContra);
             this.panelPrincipal.Controls.Add(this.txbUser);
             this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -58,6 +60,17 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(500, 450);
             this.panelPrincipal.TabIndex = 14;
+            // 
+            // RecordarUser
+            // 
+            this.RecordarUser.AutoSize = true;
+            this.RecordarUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecordarUser.Location = new System.Drawing.Point(227, 278);
+            this.RecordarUser.Name = "RecordarUser";
+            this.RecordarUser.Size = new System.Drawing.Size(86, 21);
+            this.RecordarUser.TabIndex = 15;
+            this.RecordarUser.Text = "Recordar";
+            this.RecordarUser.UseVisualStyleBackColor = true;
             // 
             // pictureBox3
             // 
@@ -94,25 +107,11 @@
             // 
             this.lbIntentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbIntentos.ForeColor = System.Drawing.Color.Red;
-            this.lbIntentos.Location = new System.Drawing.Point(157, 117);
+            this.lbIntentos.Location = new System.Drawing.Point(89, 117);
             this.lbIntentos.Name = "lbIntentos";
-            this.lbIntentos.Size = new System.Drawing.Size(238, 23);
+            this.lbIntentos.Size = new System.Drawing.Size(369, 23);
             this.lbIntentos.TabIndex = 2;
-            this.lbIntentos.Text = "Numero de intentos restantes: 3";
             this.lbIntentos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbIntentos.Visible = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.FlatAppearance.BorderSize = 0;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(213, 305);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(120, 40);
-            this.btnLogin.TabIndex = 5;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txbContra
             // 
@@ -140,16 +139,20 @@
             this.txbUser.Enter += new System.EventHandler(this.txbUser_Enter);
             this.txbUser.Leave += new System.EventHandler(this.txbUser_Leave);
             // 
-            // RecordarUser
+            // horaFecha
             // 
-            this.RecordarUser.AutoSize = true;
-            this.RecordarUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordarUser.Location = new System.Drawing.Point(227, 278);
-            this.RecordarUser.Name = "RecordarUser";
-            this.RecordarUser.Size = new System.Drawing.Size(86, 21);
-            this.RecordarUser.TabIndex = 15;
-            this.RecordarUser.Text = "Recordar";
-            this.RecordarUser.UseVisualStyleBackColor = true;
+            this.horaFecha.Enabled = true;
+            this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
+            // 
+            // btnIniciarSesion
+            // 
+            this.btnIniciarSesion.Location = new System.Drawing.Point(215, 316);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(75, 23);
+            this.btnIniciarSesion.TabIndex = 16;
+            this.btnIniciarSesion.Text = "login";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmIniciarSesion
             // 
@@ -176,10 +179,11 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbIntentos;
-        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txbContra;
         private System.Windows.Forms.TextBox txbUser;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.CheckBox RecordarUser;
+        private System.Windows.Forms.Timer horaFecha;
+        private System.Windows.Forms.Button btnIniciarSesion;
     }
 }

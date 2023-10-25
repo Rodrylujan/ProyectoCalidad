@@ -17,6 +17,8 @@ namespace ProyectoFinal.Login
     {
         private readonly string messageUserDefect = "Ingrese su usuario";
         private readonly string messagePasswordDefect = "Ingrese su contraseña";
+        private readonly string messageIntentos = "Numero de intentos: ";
+        private int Intentos = 0;
 
         private readonly Color colorMessage = Color.FromArgb(144, 144, 144);
         private readonly Color colorText = Color.Black;
@@ -88,6 +90,7 @@ namespace ProyectoFinal.Login
             if (user != null && contra != null)
             {
                 id_usuario = logUser.Instancia.validarInicioSesion(user, contra);
+                
             }
             else if (contra == "" && user == "") MessageBox.Show("complete los campos");
             else if (user == "") MessageBox.Show("Ingrese su usuario");
@@ -95,6 +98,8 @@ namespace ProyectoFinal.Login
 
             if (id_usuario >= 1)
             {
+                lbIntentos.Text = "";
+                Intentos = 0;
                 if (RecordarUser.Checked)
                 {
                     Properties.Settings.Default.User = txbUser.Text;
@@ -107,8 +112,8 @@ namespace ProyectoFinal.Login
                     Properties.Settings.Default.Clave = "";
                     Properties.Settings.Default.Recordar = RecordarUser.Checked;
                 }
+
                 Properties.Settings.Default.Save();
-                MessageBox.Show(Properties.Settings.Default.User);
                 this.Hide();
                 int id_rol_user = logUser.Instancia.buscarUsuario(id_usuario).id_rol;
                 FrmPrincipal principal = new FrmPrincipal(id_rol_user);
@@ -118,6 +123,22 @@ namespace ProyectoFinal.Login
             else
             {
                 MessageBox.Show("Contraseña o usuario no validos");
+                Intentos++;
+                if (Intentos >= 3)
+                {
+                    DateTime hora = DateTime.Now.AddMinutes(1);
+                    Properties.Settings.Default.DateBloque = hora.ToString("dd/MM/yyyy HH:mm:ss");
+                    Properties.Settings.Default.Save();
+                    btnIniciarSesion.Enabled = false;
+                    lbIntentos.Text = "Vuelva a intentarlo a " + hora;
+                    horaFecha.Start();
+                }
+                else
+                {
+                    lbIntentos.Text = messageIntentos + Intentos;
+                    lbIntentos.Visible = true;
+                }
+                
             }
         }
 
@@ -135,6 +156,7 @@ namespace ProyectoFinal.Login
                 Properties.Settings.Default.Clave = "";
                 Properties.Settings.Default.Recordar = RecordarUser.Checked;
             }
+            Properties.Settings.Default.Save();
         }
 
         private void FrmIniciarSesion_Load(object sender, EventArgs e)
@@ -146,6 +168,41 @@ namespace ProyectoFinal.Login
                 txbUser.Text = Properties.Settings.Default.User;
                 txbContra.Text = Properties.Settings.Default.Clave;
                 RecordarUser.Checked = Properties.Settings.Default.Recordar ;
+            }
+
+            string dateBloqueado = Properties.Settings.Default.DateBloque;
+            DateTime horaDesbloque=DateTime.Now;
+            if (dateBloqueado!="")
+                horaDesbloque = Convert.ToDateTime(dateBloqueado);
+            if (dateBloqueado == "" || DateTime.Now >= horaDesbloque)
+            {
+                btnIniciarSesion.Enabled = true;
+                horaFecha.Stop();
+                Properties.Settings.Default.DateBloque = "";
+                Properties.Settings.Default.Save();
+
+            }
+            else
+            {
+                btnIniciarSesion.Enabled = false;
+                horaFecha.Start();
+                lbIntentos.Text = "Vuelva a intentarlo a " + horaDesbloque;
+                lbIntentos.Visible = true;
+            }
+        }
+
+        private void horaFecha_Tick(object sender, EventArgs e)
+        {
+            string dateBloqueado = Properties.Settings.Default.DateBloque;
+            DateTime horaDesbloque = DateTime.Now;
+            if (dateBloqueado != "")
+                horaDesbloque = Convert.ToDateTime(dateBloqueado);
+            if (dateBloqueado == "" || DateTime.Now >= horaDesbloque)
+            {
+                btnIniciarSesion.Enabled = true;
+                horaFecha.Stop();
+                Properties.Settings.Default.DateBloque = "";
+                Properties.Settings.Default.Save();
             }
         }
     }

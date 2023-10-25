@@ -62,12 +62,12 @@ namespace ProyectoFinal.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Valor {
+        public string DateBloque {
             get {
-                return ((string)(this["Valor"]));
+                return ((string)(this["DateBloque"]));
             }
             set {
-                this["Valor"] = value;
+                this["DateBloque"] = value;
             }
         }
     }
