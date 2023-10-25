@@ -15,11 +15,11 @@ namespace ProyectoFinal.Login
 {
     public partial class FrmIniciarSesion : MaterialSkin.Controls.MaterialForm
     {
-        private string messageUserDefect = "Ingrese su usuario";
-        private string messagePasswordDefect = "Ingrese su contraseña";
+        private readonly string messageUserDefect = "Ingrese su usuario";
+        private readonly string messagePasswordDefect = "Ingrese su contraseña";
 
-        private Color colorMessage = Color.FromArgb(144, 144, 144);
-        private Color colorText = Color.Black;
+        private readonly Color colorMessage = Color.FromArgb(144, 144, 144);
+        private readonly Color colorText = Color.Black;
 
         public FrmIniciarSesion()
         {
@@ -83,19 +83,20 @@ namespace ProyectoFinal.Login
         {
             string user = txbUser.Text;
             string contra = txbContra.Text;
-            int estado = 0;
+            int id_usuario = 0;
 
             if (user != null && contra != null)
             {
-                estado = logUser.Instancia.validarInicioSesion(user, contra);
+                id_usuario = logUser.Instancia.validarInicioSesion(user, contra);
             }
             else if (contra == "" && user == "") MessageBox.Show("complete los campos");
             else if (user == "") MessageBox.Show("Ingrese su usuario");
             else MessageBox.Show("Ingrese su contraseña");
-            if (estado >= 1)
+
+            if (id_usuario >= 1)
             {
                 this.Hide();
-                int id_rol_user = logUser.Instancia.buscarUsuario(estado).id_rol;
+                int id_rol_user = logUser.Instancia.buscarUsuario(id_usuario).id_rol;
                 FrmPrincipal principal = new FrmPrincipal(id_rol_user);
                 principal.ShowDialog();
                 this.Show();

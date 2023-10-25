@@ -36,7 +36,7 @@ namespace ProyectoFinal.Login
             btnAtras.Visible = true;
             btnSalir.Visible = false;
             FrmCambiarPass frmCambiarPass = new FrmCambiarPass();
-            frmCambiarPass.Owner = this; // Establece a FrmLogin como propietario
+            frmCambiarPass.Owner = this; 
             AbrirFormHijo(frmCambiarPass);
         }
 

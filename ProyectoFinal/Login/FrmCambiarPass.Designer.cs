@@ -168,7 +168,7 @@ namespace ProyectoFinal.Login
             this.panelNewPassword.Controls.Add(this.panel9);
             this.panelNewPassword.Controls.Add(this.lbMesage);
             this.panelNewPassword.Controls.Add(this.panel11);
-            this.panelNewPassword.Location = new System.Drawing.Point(7, 185);
+            this.panelNewPassword.Location = new System.Drawing.Point(32, 216);
             this.panelNewPassword.Name = "panelNewPassword";
             this.panelNewPassword.Size = new System.Drawing.Size(453, 222);
             this.panelNewPassword.TabIndex = 18;
@@ -178,7 +178,7 @@ namespace ProyectoFinal.Login
             // 
             this.panel8.Controls.Add(this.btnActualizar);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 160);
+            this.panel8.Location = new System.Drawing.Point(0, 179);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(453, 60);
             this.panel8.TabIndex = 4;
@@ -201,7 +201,7 @@ namespace ProyectoFinal.Login
             this.panel9.Controls.Add(this.txbConfirmPassword);
             this.panel9.Controls.Add(this.label6);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 110);
+            this.panel9.Location = new System.Drawing.Point(0, 129);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(453, 50);
             this.panel9.TabIndex = 3;
@@ -230,7 +230,7 @@ namespace ProyectoFinal.Login
             this.lbMesage.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbMesage.Location = new System.Drawing.Point(0, 50);
             this.lbMesage.Name = "lbMesage";
-            this.lbMesage.Size = new System.Drawing.Size(453, 60);
+            this.lbMesage.Size = new System.Drawing.Size(453, 79);
             this.lbMesage.TabIndex = 2;
             this.lbMesage.Visible = false;
             // 
@@ -240,7 +240,7 @@ namespace ProyectoFinal.Login
             this.lbContraseñas.ForeColor = System.Drawing.Color.Red;
             this.lbContraseñas.Location = new System.Drawing.Point(83, -1);
             this.lbContraseñas.Name = "lbContraseñas";
-            this.lbContraseñas.Size = new System.Drawing.Size(292, 58);
+            this.lbContraseñas.Size = new System.Drawing.Size(292, 77);
             this.lbContraseñas.TabIndex = 15;
             // 
             // panel11
