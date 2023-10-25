@@ -31,10 +31,10 @@ namespace ProyectoFinal.Login
 
         private void txbNuevoPassword_MouseEnter(object sender, EventArgs e)
         {
-            string condiciones = "";
-            condiciones = "- Minimo 8 caracteres\n" +
-                            "- Debe incluir un numero, una mayuscula y una minuscula\n" +
-                            "- Solo incluir los siguientes caracteres especales: # @ %\n";
+            string condiciones = "- Minimo 8 caracteres\n" +
+                "- Minimo un numero\n" +
+                "- Minimo una mayuscula \n" +
+                "- Minimo una minuscula\n";
             lbContraseñas.Text = condiciones;
             lbMesage.Visible = true;
         }
@@ -109,24 +109,16 @@ namespace ProyectoFinal.Login
         }
         public bool ValidarContraseña(string contraseña)
         {
-            // Comprueba si la contraseña tiene al menos 8 caracteres.
             if (contraseña.Length < 8)
                 return false;
 
-            // Comprueba si la contraseña contiene al menos una letra minúscula.
             if (!Regex.IsMatch(contraseña, @"[a-z]"))
                 return false;
 
-            // Comprueba si la contraseña contiene al menos una letra mayúscula.
             if (!Regex.IsMatch(contraseña, @"[A-Z]"))
                 return false;
 
-            // Comprueba si la contraseña contiene al menos un número.
             if (!Regex.IsMatch(contraseña, @"[0-9]"))
-                return false;
-
-            // Comprueba si la contraseña solo contiene los caracteres especiales permitidos.
-            if (!Regex.IsMatch(contraseña, @"^[#@%a-zA-Z0-9]+$"))
                 return false;
 
             return true;

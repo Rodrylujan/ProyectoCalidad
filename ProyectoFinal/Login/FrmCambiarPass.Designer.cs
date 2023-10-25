@@ -48,10 +48,10 @@ namespace ProyectoFinal.Login
             this.lbMesage = new System.Windows.Forms.Panel();
             this.lbContraseñas = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.verificacion = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txbNewPassword = new System.Windows.Forms.TextBox();
             this.lbMessage = new System.Windows.Forms.Label();
-            this.verificacion = new System.Windows.Forms.PictureBox();
             this.PanelUserPassword.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -168,7 +168,7 @@ namespace ProyectoFinal.Login
             this.panelNewPassword.Controls.Add(this.panel9);
             this.panelNewPassword.Controls.Add(this.lbMesage);
             this.panelNewPassword.Controls.Add(this.panel11);
-            this.panelNewPassword.Location = new System.Drawing.Point(32, 248);
+            this.panelNewPassword.Location = new System.Drawing.Point(7, 185);
             this.panelNewPassword.Name = "panelNewPassword";
             this.panelNewPassword.Size = new System.Drawing.Size(453, 222);
             this.panelNewPassword.TabIndex = 18;
@@ -236,6 +236,8 @@ namespace ProyectoFinal.Login
             // 
             // lbContraseñas
             // 
+            this.lbContraseñas.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbContraseñas.ForeColor = System.Drawing.Color.Red;
             this.lbContraseñas.Location = new System.Drawing.Point(83, -1);
             this.lbContraseñas.Name = "lbContraseñas";
             this.lbContraseñas.Size = new System.Drawing.Size(292, 58);
@@ -251,6 +253,17 @@ namespace ProyectoFinal.Login
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(453, 50);
             this.panel11.TabIndex = 1;
+            // 
+            // verificacion
+            // 
+            this.verificacion.Image = global::ProyectoFinal.Properties.Resources.Incorrecto;
+            this.verificacion.Location = new System.Drawing.Point(391, 3);
+            this.verificacion.Name = "verificacion";
+            this.verificacion.Size = new System.Drawing.Size(37, 32);
+            this.verificacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.verificacion.TabIndex = 14;
+            this.verificacion.TabStop = false;
+            this.verificacion.Visible = false;
             // 
             // label8
             // 
@@ -270,6 +283,8 @@ namespace ProyectoFinal.Login
             this.txbNewPassword.Size = new System.Drawing.Size(208, 26);
             this.txbNewPassword.TabIndex = 11;
             this.txbNewPassword.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txbNewPassword_KeyUp);
+            this.txbNewPassword.MouseEnter += new System.EventHandler(this.txbNuevoPassword_MouseEnter);
+            this.txbNewPassword.MouseLeave += new System.EventHandler(this.txbNuevoPassword_MouseLeave);
             // 
             // lbMessage
             // 
@@ -282,17 +297,6 @@ namespace ProyectoFinal.Login
             this.lbMessage.Text = "Usuario o contraseña incorrectos";
             this.lbMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbMessage.Visible = false;
-            // 
-            // verificacion
-            // 
-            this.verificacion.Image = global::ProyectoFinal.Properties.Resources.Incorrecto;
-            this.verificacion.Location = new System.Drawing.Point(391, 3);
-            this.verificacion.Name = "verificacion";
-            this.verificacion.Size = new System.Drawing.Size(37, 32);
-            this.verificacion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.verificacion.TabIndex = 14;
-            this.verificacion.TabStop = false;
-            this.verificacion.Visible = false;
             // 
             // FrmCambiarPass
             // 
