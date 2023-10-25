@@ -126,7 +126,7 @@ namespace ProyectoFinal.Login
                 Intentos++;
                 if (Intentos >= 3)
                 {
-                    DateTime hora = DateTime.Now.AddMinutes(1800);
+                    DateTime hora = DateTime.Now.AddMinutes(60);
                     Properties.Settings.Default.DateBloque = hora.ToString("dd/MM/yyyy HH:mm:ss");
                     Properties.Settings.Default.Save();
                     btnIniciarSesion.Enabled = false;
