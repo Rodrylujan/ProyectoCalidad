@@ -29,21 +29,23 @@
         private void InitializeComponent()
         {
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lbIntentos = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txbContra = new System.Windows.Forms.TextBox();
             this.txbUser = new System.Windows.Forms.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.RecordarUser = new System.Windows.Forms.CheckBox();
             this.panelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelPrincipal
             // 
             this.panelPrincipal.BackColor = System.Drawing.Color.White;
+            this.panelPrincipal.Controls.Add(this.RecordarUser);
             this.panelPrincipal.Controls.Add(this.pictureBox3);
             this.panelPrincipal.Controls.Add(this.pictureBox2);
             this.panelPrincipal.Controls.Add(this.label3);
@@ -56,6 +58,16 @@
             this.panelPrincipal.Name = "panelPrincipal";
             this.panelPrincipal.Size = new System.Drawing.Size(500, 450);
             this.panelPrincipal.TabIndex = 14;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::ProyectoFinal.Properties.Resources.cerrar_con_llave;
+            this.pictureBox3.Location = new System.Drawing.Point(89, 221);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -94,7 +106,7 @@
             // 
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(193, 305);
+            this.btnLogin.Location = new System.Drawing.Point(213, 305);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(120, 40);
             this.btnLogin.TabIndex = 5;
@@ -128,15 +140,16 @@
             this.txbUser.Enter += new System.EventHandler(this.txbUser_Enter);
             this.txbUser.Leave += new System.EventHandler(this.txbUser_Leave);
             // 
-            // pictureBox3
+            // RecordarUser
             // 
-            this.pictureBox3.Image = global::ProyectoFinal.Properties.Resources.cerrar_con_llave;
-            this.pictureBox3.Location = new System.Drawing.Point(89, 221);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 14;
-            this.pictureBox3.TabStop = false;
+            this.RecordarUser.AutoSize = true;
+            this.RecordarUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecordarUser.Location = new System.Drawing.Point(227, 278);
+            this.RecordarUser.Name = "RecordarUser";
+            this.RecordarUser.Size = new System.Drawing.Size(86, 21);
+            this.RecordarUser.TabIndex = 15;
+            this.RecordarUser.Text = "Recordar";
+            this.RecordarUser.UseVisualStyleBackColor = true;
             // 
             // FrmIniciarSesion
             // 
@@ -147,10 +160,12 @@
             this.Controls.Add(this.panelPrincipal);
             this.Name = "FrmIniciarSesion";
             this.Text = "FrmIniciarSesion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmIniciarSesion_FormClosing);
+            this.Load += new System.EventHandler(this.FrmIniciarSesion_Load);
             this.panelPrincipal.ResumeLayout(false);
             this.panelPrincipal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,5 +180,6 @@
         private System.Windows.Forms.TextBox txbContra;
         private System.Windows.Forms.TextBox txbUser;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.CheckBox RecordarUser;
     }
 }

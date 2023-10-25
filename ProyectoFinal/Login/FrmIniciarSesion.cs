@@ -95,6 +95,20 @@ namespace ProyectoFinal.Login
 
             if (id_usuario >= 1)
             {
+                if (RecordarUser.Checked)
+                {
+                    Properties.Settings.Default.User = txbUser.Text;
+                    Properties.Settings.Default.Clave = txbContra.Text;
+                    Properties.Settings.Default.Recordar = RecordarUser.Checked;
+                }
+                else
+                {
+                    Properties.Settings.Default.User = "";
+                    Properties.Settings.Default.Clave = "";
+                    Properties.Settings.Default.Recordar = RecordarUser.Checked;
+                }
+                Properties.Settings.Default.Save();
+                MessageBox.Show(Properties.Settings.Default.User);
                 this.Hide();
                 int id_rol_user = logUser.Instancia.buscarUsuario(id_usuario).id_rol;
                 FrmPrincipal principal = new FrmPrincipal(id_rol_user);
@@ -104,6 +118,34 @@ namespace ProyectoFinal.Login
             else
             {
                 MessageBox.Show("Contraseña o usuario no validos");
+            }
+        }
+
+        private void FrmIniciarSesion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if(RecordarUser.Checked)
+            {
+                Properties.Settings.Default.User = txbUser.Text;
+                Properties.Settings.Default.Clave = txbContra.Text;
+                Properties.Settings.Default.Recordar = RecordarUser.Checked;
+            }
+            else
+            {
+                Properties.Settings.Default.User = "";
+                Properties.Settings.Default.Clave = "";
+                Properties.Settings.Default.Recordar = RecordarUser.Checked;
+            }
+        }
+
+        private void FrmIniciarSesion_Load(object sender, EventArgs e)
+        {
+            if (Properties.Settings.Default.Recordar==true)
+            {
+                txbPassword_Enter(txbContra, new EventArgs());
+                txbUser_Enter(txbUser, new EventArgs());
+                txbUser.Text = Properties.Settings.Default.User;
+                txbContra.Text = Properties.Settings.Default.Clave;
+                RecordarUser.Checked = Properties.Settings.Default.Recordar ;
             }
         }
     }

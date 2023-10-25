@@ -168,7 +168,7 @@ namespace ProyectoFinal.Login
             this.panelNewPassword.Controls.Add(this.panel9);
             this.panelNewPassword.Controls.Add(this.lbMesage);
             this.panelNewPassword.Controls.Add(this.panel11);
-            this.panelNewPassword.Location = new System.Drawing.Point(32, 216);
+            this.panelNewPassword.Location = new System.Drawing.Point(35, 366);
             this.panelNewPassword.Name = "panelNewPassword";
             this.panelNewPassword.Size = new System.Drawing.Size(453, 222);
             this.panelNewPassword.TabIndex = 18;
